@@ -315,6 +315,12 @@ html:not(.js) .billing button[aria-pressed='true'] {
 	color: var(--muted);
 }
 
+.plan__note a {
+	color: var(--ink);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
 /* ----- Button: full width, pinned to the foot of the card ----- */
 
 .plan__btn {

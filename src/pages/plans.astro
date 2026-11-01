@@ -18,6 +18,7 @@ type Plan = {
 	startingFrom?: boolean;
 	price?: { annual: number; monthly: number };
 	fixedNote?: string;
+	noteLink?: { label: string; href: string };
 	pitch: { title: string; text: string };
 	includesLabel: string;
 	features: string[];
@@ -124,13 +125,17 @@ const plans: Plan[] = [
 		},
 		includesLabel: 'Everything in Dominate, plus',
 		features: [
+			'Custom AI agents that manage the work',
 			'Custom AI workflows',
 			'Multi-site dashboard',
 			'Integrations with the tools you already use',
+			'Any Sharktech service: managed IT, cloud, cybersecurity, AI adoption, automation, business intelligence, custom software and apps',
 			'Monthly strategy sessions',
 			'Dedicated account director',
 			'Priority support',
 		],
+		note: 'Built with Sharktech Global, the Australian team behind VCPility.',
+		noteLink: { label: 'See all Sharktech services', href: 'https://www.sharktech.com.au/services' },
 		cta: { label: 'Book a Strategy Call', style: 'outline' },
 	},
 ];
@@ -169,7 +174,7 @@ const addOns = [
 		art: 'ads',
 		title: 'Ads Management',
 		price: 'AU$300/month billed annually, or AU$350 month to month',
-		text: 'Expert management of your Google and Meta ad campaigns. Covers up to AU$3,000 in monthly ad spend; 15% of spend applies above that. Included in Dominate.',
+		text: 'Expert management of your Google and Meta ad campaigns. For Launch and Elevate. Covers up to AU$3,000 in monthly ad spend; 15% of spend applies above that. Included in Dominate.',
 		icon: '<path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
 	},
 	{
@@ -259,7 +264,7 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 			<ul class="plans__grid">
 				{
 					plans.map((plan, i) => {
-						const { name, type, featured, badge, startingFrom, price, pitch, includesLabel, features, note, cta } = plan;
+						const { name, type, featured, badge, startingFrom, price, pitch, includesLabel, features, note, noteLink, cta } = plan;
 						return (
 							<li class="plans__cell reveal" style={`--d: ${i * 0.06}s`}>
 								<article class:list={['card', 'plan', { 'plan--featured': featured }]} data-spotlight>
@@ -308,7 +313,17 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 										</ul>
 									</div>
 
-									{note && <p class="plan__note">{note}</p>}
+									{note && (
+										<p class="plan__note">
+											{note}
+											{noteLink && (
+												<>
+													{' '}
+													<a href={noteLink.href} target="_blank" rel="noopener">{noteLink.label}</a>
+												</>
+											)}
+										</p>
+									)}
 
 									<a href="#plan-enquiry" class={`btn plan__btn plan__btn--${cta.style}`}>
 										{cta.label}
