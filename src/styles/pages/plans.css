@@ -275,6 +275,12 @@ html:not(.js) .billing button[aria-pressed='true'] {
 	color: var(--muted);
 }
 
+.plan__features-title--services {
+	margin-top: 22px;
+	font-weight: 600;
+	color: var(--ink);
+}
+
 .plan__features ul {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);

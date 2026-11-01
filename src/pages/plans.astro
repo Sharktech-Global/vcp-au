@@ -19,6 +19,7 @@ type Plan = {
 	price?: { annual: number; monthly: number };
 	fixedNote?: string;
 	noteLink?: { label: string; href: string };
+	services?: { label: string; items: string[] };
 	pitch: { title: string; text: string };
 	includesLabel: string;
 	features: string[];
@@ -127,14 +128,26 @@ const plans: Plan[] = [
 		features: [
 			'Custom AI agents that manage the work',
 			'Custom AI workflows',
+			'Managed IT and essential business IT (included)',
 			'Multi-site dashboard',
 			'Integrations with the tools you already use',
-			'Managed IT included: helpdesk, monitoring, patching, tested backups, email and staff onboarding',
-			'Add any Sharktech service: cloud, cybersecurity, AI adoption, automation, business intelligence, custom software and apps',
 			'Monthly strategy sessions',
 			'Dedicated account director',
 			'Priority support',
 		],
+		services: {
+			label: 'Sharktech services scoped into your plan',
+			items: [
+				'Cloud services and on-site IT support',
+				'Cybersecurity for small and mid-sized businesses',
+				'AI adoption, AI agents and AI governance',
+				'Business automation and API integration',
+				'Business intelligence and data analytics',
+				'Custom software, web app and mobile app development',
+				'Engineering and business consultancy',
+				'Branding',
+			],
+		},
 		note: 'Built with Sharktech Global, the Australian team behind VCPility.',
 		noteLink: { label: 'See all Sharktech services', href: 'https://www.sharktech.com.au/services' },
 		cta: { label: 'Book a Strategy Call', style: 'outline' },
@@ -265,7 +278,7 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 			<ul class="plans__grid">
 				{
 					plans.map((plan, i) => {
-						const { name, type, featured, badge, startingFrom, price, pitch, includesLabel, features, note, noteLink, cta } = plan;
+						const { name, type, featured, badge, startingFrom, price, pitch, includesLabel, features, services, note, noteLink, cta } = plan;
 						return (
 							<li class="plans__cell reveal" style={`--d: ${i * 0.06}s`}>
 								<article class:list={['card', 'plan', { 'plan--featured': featured }]} data-spotlight>
@@ -312,6 +325,19 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 												</li>
 											))}
 										</ul>
+										{services && (
+											<>
+												<p class="plan__features-title plan__features-title--services">{services.label}</p>
+												<ul>
+													{services.items.map((item) => (
+														<li>
+															<svg viewBox="0 0 24 24" aria-hidden="true" set:html={check} />
+															{item}
+														</li>
+													))}
+												</ul>
+											</>
+										)}
 									</div>
 
 									{note && (
