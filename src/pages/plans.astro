@@ -16,7 +16,7 @@ type Plan = {
 	featured?: boolean;
 	badge?: string;
 	startingFrom?: boolean;
-	price: { annual: number; monthly: number };
+	price?: { annual: number; monthly: number };
 	pitch: { title: string; text: string };
 	includesLabel: string;
 	features: string[];
@@ -28,7 +28,7 @@ const plans: Plan[] = [
 	{
 		name: 'Launch',
 		type: 'Foundation Package',
-		price: { annual: 165, monthly: 220 },
+		price: { annual: 70, monthly: 85 },
 		pitch: {
 			title: 'AI-Powered Marketing Partner',
 			text: 'Perfect for sole traders ready to establish their digital footprint with professional support.',
@@ -51,20 +51,21 @@ const plans: Plan[] = [
 		type: 'Professional Package',
 		featured: true,
 		badge: 'Most Popular',
-		price: { annual: 590, monthly: 790 },
+		price: { annual: 300, monthly: 360 },
 		pitch: {
 			title: 'AI-Powered Growth Team',
-			text: 'Designed for established traders and medium-sized businesses ready to dominate their market.',
+			text: 'Designed for established traders and growing businesses that want more enquiries without more admin.',
 		},
 		includesLabel: 'Everything in Launch, plus',
 		features: [
 			'StoryBrand Website',
 			'AI Chat',
+			'AI Voice Agent',
 			'Basic SEO',
+			'Weekly Social Media Management',
 			'Funnel',
 			'GBP Management',
 			'Reputation Management',
-			'Weekly Social Media',
 			'LinkedIn Profile',
 			'Follow-up Campaign',
 			'Referral Campaign',
@@ -75,33 +76,32 @@ const plans: Plan[] = [
 		name: 'Dominate',
 		type: 'Premium Package',
 		badge: 'Best Value',
-		price: { annual: 940, monthly: 1250 },
+		price: { annual: 490, monthly: 590 },
 		pitch: {
 			title: 'AI-Powered Marketing Department',
-			text: 'Built for multi-site businesses that need enterprise-level marketing execution across multiple locations.',
+			text: 'Built for businesses ready to own their local search results and show up when customers ask AI for a recommendation.',
 		},
 		includesLabel: 'Everything in Elevate, plus',
 		features: [
+			'Advanced SEO',
+			'AEO (AI Search Optimisation)',
+			'Monthly SEO & AEO Reporting',
+			'Advanced AI Chatbot',
+			'Full Social Media Management',
 			'New webpage monthly',
 			'Landing Pages',
-			'Advanced SEO',
-			'AI Search Optimisation',
-			'Social Media Management',
 			'LinkedIn Management',
-			'Google Ads Management',
-			'Meta Ads Management',
 		],
+		note: 'Google and Meta ads management available as an add-on',
 		cta: { label: 'Scale Your Business', style: 'dark' },
 	},
 	{
-		name: 'Apex',
+		name: 'Custom',
 		type: 'Enterprise Package',
-		badge: 'Enterprise',
-		startingFrom: true,
-		price: { annual: 5760, monthly: 7200 },
+		badge: 'Tailored',
 		pitch: {
 			title: 'AI-Powered Marketing Command Center',
-			text: 'Engineered for national brands, multi-site networks, and enterprise organisations demanding peak performance.',
+			text: 'For national brands, multi-site networks and organisations that need a scope built around their goals.',
 		},
 		includesLabel: 'Everything in Dominate, plus',
 		features: [
@@ -114,20 +114,29 @@ const plans: Plan[] = [
 			'Monthly Strategy Sessions',
 			'Enterprise SLA & Priority Support',
 		],
-		note: 'Custom pricing for multi-site deployments',
-		cta: { label: 'Book a Strategy Call', style: 'outline' },
+		note: 'Tailored pricing for multi-site and enterprise deployments',
+		cta: { label: 'Talk to Sales', style: 'outline' },
 	},
 ];
 
 const money = (n: number) => n.toLocaleString('en-AU');
 
 // Annual saving versus paying monthly, as a whole percentage
-const saving = ({ annual, monthly }: Plan['price']) => Math.round((1 - annual / monthly) * 100);
+const saving = ({ annual, monthly }: NonNullable<Plan['price']>) => Math.round((1 - annual / monthly) * 100);
 
-const billingNote = (plan: Plan) => ({
-	annual: `Billed ${plan.startingFrom ? 'from' : 'at'} $${money(plan.price.annual * 12)} + GST per year - save up to ${saving(plan.price)}% versus paying monthly.`,
-	monthly: `Paid monthly, or switch to annual billing to save up to ${saving(plan.price)}%.`,
-});
+const billingNote = (plan: Plan) => {
+	if (!plan.price) {
+		const text = 'Scoped to your locations, channels and goals. Talk to our team for a quote.';
+		return { annual: text, monthly: text };
+	}
+	return {
+		annual: `Billed ${plan.startingFrom ? 'from' : 'at'} $${money(plan.price.annual * 12)} + GST per year - save up to ${saving(plan.price)}% versus paying monthly.`,
+		monthly: `Paid monthly, or switch to annual billing to save up to ${saving(plan.price)}%.`,
+	};
+};
+
+// Largest annual saving across the priced plans, for the billing toggle label
+const maxSaving = Math.max(...plans.flatMap((plan) => (plan.price ? [saving(plan.price)] : [])));
 
 /* ----- Add-ons: each card gets a small live illustration (art) ----- */
 
@@ -141,9 +150,9 @@ const addOns = [
 	},
 	{
 		art: 'ads',
-		title: 'Ad Budget Management',
-		price: '15% of ad spend (min AU$500/month)',
-		text: 'Expert management of your advertising campaigns across Google, Meta, and LinkedIn.',
+		title: 'Ads Management',
+		price: 'AU$300/month billed annually, or AU$350 month to month',
+		text: 'Expert management of your Google and Meta ad campaigns. Covers up to AU$3,000 in monthly ad spend; 15% of spend applies above that.',
 		icon: '<path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
 	},
 	{
@@ -216,7 +225,7 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 						<button type="button" aria-pressed="false" data-billing="monthly">Monthly</button>
 						<button type="button" aria-pressed="true" data-billing="annual">
 							Annually
-							<span class="billing__save">Save up to 25%</span>
+							<span class="billing__save">Save up to {maxSaving}%</span>
 						</button>
 					</div>
 					<p class="sr-only" aria-live="polite" data-billing-status></p>
@@ -247,13 +256,19 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 
 									<div class="plan__price">
 										<p class="plan__from">{startingFrom && 'Starting from'}</p>
-										<p class="plan__amount">
-											<span class="plan__currency">$</span>
-											<span class="plan__value" data-annual={money(price.annual)} data-monthly={money(price.monthly)}>
-												{money(price.annual)}
-											</span>
-											<span class="plan__period">+ GST / month</span>
-										</p>
+										{price ? (
+											<p class="plan__amount">
+												<span class="plan__currency">$</span>
+												<span class="plan__value" data-annual={money(price.annual)} data-monthly={money(price.monthly)}>
+													{money(price.annual)}
+												</span>
+												<span class="plan__period">+ GST / month</span>
+											</p>
+										) : (
+											<p class="plan__amount">
+												<span class="plan__value" data-annual="Custom" data-monthly="Custom">Custom</span>
+											</p>
+										)}
 										<p class="plan__billing" data-annual={billingNote(plan).annual} data-monthly={billingNote(plan).monthly}>
 											{billingNote(plan).annual}
 										</p>
@@ -338,7 +353,7 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 												</span>
 											))}
 											<span class="aa-ads__fee">
-												<strong>15%</strong> of spend
+												<strong>$300</strong> / month
 											</span>
 										</span>
 									)}
