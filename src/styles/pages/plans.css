@@ -98,8 +98,8 @@ html:not(.js) .billing button[aria-pressed='true'] {
    subgrid, so prices, pitches, lists and buttons line up across a row of cards */
 .plans__grid {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: 0 16px;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 0 14px;
 }
 
 .plans__cell {
@@ -117,7 +117,7 @@ html:not(.js) .billing button[aria-pressed='true'] {
 	grid-template-rows: subgrid;
 	row-gap: 0;
 	height: auto;
-	padding: 32px 28px 28px;
+	padding: 28px 22px 24px;
 }
 
 /* Elevate: the one highlighted plan, a navy card with the border beam */
@@ -138,11 +138,12 @@ html:not(.js) .billing button[aria-pressed='true'] {
 	background: radial-gradient(260px circle at var(--mx) var(--my), rgb(255 255 255 / 0.5), transparent 70%);
 }
 
-/* ----- Head: name and badge, then the package type ----- */
+/* ----- Head: name, then the badge, then the package type (stacked so long badges never overlap the name) ----- */
 
 .plan__head {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto;
+	grid-template-columns: minmax(0, 1fr);
+	justify-items: start;
 	align-items: center;
 	align-content: start;
 	gap: 6px 12px;
@@ -887,7 +888,7 @@ html:not(.js) .billing button[aria-pressed='true'] {
    Responsive
    ============================================ */
 
-/* Four across, then two across (with two-column feature lists), then one */
+/* Five across, then two across (with two-column feature lists), then one */
 @media (max-width: 1280px) {
 	.plans__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));

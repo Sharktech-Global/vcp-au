@@ -17,6 +17,7 @@ type Plan = {
 	badge?: string;
 	startingFrom?: boolean;
 	price?: { annual: number; monthly: number };
+	fixedNote?: string;
 	pitch: { title: string; text: string };
 	includesLabel: string;
 	features: string[];
@@ -26,96 +27,111 @@ type Plan = {
 
 const plans: Plan[] = [
 	{
-		name: 'Launch',
-		type: 'Foundation Package',
-		price: { annual: 70, monthly: 85 },
+		name: 'Starter',
+		type: 'On the tools',
+		badge: 'New',
+		price: { annual: 50, monthly: 50 },
+		fixedNote: 'Same price monthly or annually. Live in 60 minutes.',
 		pitch: {
-			title: 'AI-Powered Marketing Partner',
-			text: 'Perfect for sole traders ready to establish their digital footprint with professional support.',
+			title: 'Your AI front desk',
+			text: 'For sole traders who need every enquiry caught and booked, without a big monthly bill.',
 		},
 		includesLabel: 'Includes',
 		features: [
-			'Chat Widget',
-			'Appointment Calendar',
-			'CRM',
-			'GBP Integration',
-			'Facebook Integration',
-			'Instagram Integration',
-			'Centralised Inbox',
-			'Mobile App',
+			'Website chat widget',
+			'Online booking calendar',
+			'CRM for every call, quote and job',
+			'Centralised inbox',
+			'Mobile app',
+			'Google Business Profile integration',
 		],
-		cta: { label: 'Start Your Journey', style: 'dark' },
+		cta: { label: 'Start for $50', style: 'dark' },
+	},
+	{
+		name: 'Launch',
+		type: 'Foundation package',
+		price: { annual: 170, monthly: 190 },
+		pitch: {
+			title: 'AI-powered marketing partner',
+			text: 'For sole traders ready to build their digital footprint with professional support.',
+		},
+		includesLabel: 'Everything in Starter, plus',
+		features: [
+			'AI voice agent',
+			'AI chatbot for website forms',
+			'AI chatbot for Facebook and Instagram',
+			'Automatic Google review monitoring',
+			'Facebook integration',
+			'Instagram integration',
+			'Chat widget and calendar set up for you',
+		],
+		note: '30-day free trial with no set-up fee. Card required at sign-up; billed on day 31 unless you cancel.',
+		cta: { label: 'Start 30-day free trial', style: 'dark' },
 	},
 	{
 		name: 'Elevate',
-		type: 'Professional Package',
+		type: 'Professional package',
 		featured: true,
-		badge: 'Most Popular',
-		price: { annual: 300, monthly: 360 },
+		badge: 'Best for growing trades',
+		price: { annual: 460, monthly: 529 },
 		pitch: {
-			title: 'AI-Powered Growth Team',
-			text: 'Designed for established traders and growing businesses that want more enquiries without more admin.',
+			title: 'AI-powered growth team',
+			text: 'For established traders and medium-sized businesses ready to win their local market.',
 		},
 		includesLabel: 'Everything in Launch, plus',
 		features: [
-			'StoryBrand Website',
-			'AI Chat',
-			'AI Voice Agent',
+			'StoryBrand website',
+			'AI chat',
 			'Basic SEO',
-			'Weekly Social Media Management',
 			'Funnel',
-			'GBP Management',
-			'Reputation Management',
-			'LinkedIn Profile',
-			'Follow-up Campaign',
-			'Referral Campaign',
+			'Google Business Profile management',
+			'Reputation management',
+			'Weekly social media management',
+			'LinkedIn profile',
+			'Follow-up and referral campaigns',
 		],
+		note: 'Add AI-powered daily SEO and AEO with 20 new pages a month for $180 + GST a month.',
 		cta: { label: 'Level Up Now', style: 'accent' },
 	},
 	{
 		name: 'Dominate',
-		type: 'Premium Package',
-		badge: 'Best Value',
-		price: { annual: 490, monthly: 590 },
+		type: 'Premium package',
+		badge: 'Most complete',
+		price: { annual: 710, monthly: 749 },
 		pitch: {
-			title: 'AI-Powered Marketing Department',
-			text: 'Built for businesses ready to own their local search results and show up when customers ask AI for a recommendation.',
+			title: 'AI-powered marketing department',
+			text: 'For multi-site businesses that need marketing done across every location.',
 		},
 		includesLabel: 'Everything in Elevate, plus',
 		features: [
-			'Advanced SEO',
-			'AEO (AI Search Optimisation)',
-			'Monthly SEO & AEO Reporting',
-			'Advanced AI Chatbot',
-			'Full Social Media Management',
 			'New webpage monthly',
-			'Landing Pages',
-			'LinkedIn Management',
+			'Landing pages',
+			'Advanced SEO',
+			'AI search optimisation (AEO)',
+			'Social media management',
+			'Advanced AI chatbot',
+			'Monthly SEO and AEO report',
 		],
 		note: 'Google and Meta ads management available as an add-on',
 		cta: { label: 'Scale Your Business', style: 'dark' },
 	},
 	{
 		name: 'Custom',
-		type: 'Enterprise Package',
-		badge: 'Tailored',
+		type: 'Built around your business',
 		pitch: {
-			title: 'AI-Powered Marketing Command Center',
-			text: 'For national brands, multi-site networks and organisations that need a scope built around their goals.',
+			title: 'Your AI business system, made to measure',
+			text: 'For multi-site businesses, franchises and larger teams that need workflows built around how they run.',
 		},
 		includesLabel: 'Everything in Dominate, plus',
 		features: [
-			'Custom AI Workflows',
-			'Multi-site Dashboard',
-			'Campaign Intelligence',
-			'Predictive Analytics',
-			'LinkedIn Ads Management',
-			'Dedicated Account Director',
-			'Monthly Strategy Sessions',
-			'Enterprise SLA & Priority Support',
+			'Custom AI workflows',
+			'Multi-site dashboard',
+			'Integrations with the tools you already use',
+			'Monthly strategy sessions',
+			'Dedicated account director',
+			'Priority support',
 		],
-		note: 'Tailored pricing for multi-site and enterprise deployments',
-		cta: { label: 'Talk to Sales', style: 'outline' },
+		cta: { label: 'Book a Strategy Call', style: 'outline' },
 	},
 ];
 
@@ -125,8 +141,9 @@ const money = (n: number) => n.toLocaleString('en-AU');
 const saving = ({ annual, monthly }: NonNullable<Plan['price']>) => Math.round((1 - annual / monthly) * 100);
 
 const billingNote = (plan: Plan) => {
+	if (plan.fixedNote) return { annual: plan.fixedNote, monthly: plan.fixedNote };
 	if (!plan.price) {
-		const text = 'Scoped to your locations, channels and goals. Talk to our team for a quote.';
+		const text = 'Quoted in writing after a free discovery call.';
 		return { annual: text, monthly: text };
 	}
 	return {
