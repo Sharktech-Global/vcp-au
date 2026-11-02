@@ -984,3 +984,99 @@ html:not(.js) .billing button[aria-pressed='true'] {
 		display: none;
 	}
 }
+
+/* ============================================
+   AI voice budget calculator
+   ============================================ */
+
+.vb {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 28px 32px;
+	padding: 32px;
+}
+
+.vb__inputs {
+	display: grid;
+	gap: 16px;
+	align-content: start;
+}
+
+.vb__field {
+	display: grid;
+	gap: 6px;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--muted);
+}
+
+.vb__field select,
+.vb__field input {
+	min-height: 44px;
+	padding: 8px 12px;
+	font: inherit;
+	font-size: 16px;
+	color: var(--ink);
+	background: #fff;
+	border: 1px solid var(--rule);
+	border-radius: 10px;
+}
+
+.vb__results {
+	display: grid;
+	gap: 10px;
+	align-content: start;
+	margin: 0;
+}
+
+.vb__results div {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--rule);
+}
+
+.vb__results dt {
+	font-size: 14px;
+	color: var(--muted);
+}
+
+.vb__results dd {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.vb__total dd {
+	font-size: 22px;
+}
+
+.vb__total small {
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--muted);
+}
+
+.vb__budget {
+	display: grid;
+	gap: 14px;
+	align-content: start;
+}
+
+.vb__cap {
+	margin: 0;
+	font-size: 13px;
+	color: var(--muted);
+}
+
+.vb__form {
+	grid-column: 1 / -1;
+}
+
+@media (max-width: 1024px) {
+	.vb {
+		grid-template-columns: minmax(0, 1fr);
+		padding: 24px;
+	}
+}

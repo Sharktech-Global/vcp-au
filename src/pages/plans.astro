@@ -229,6 +229,12 @@ const users =
 
 const formHost = 'https://payments.accrualos.com.au';
 const planFormId = 'EM6FhotBuN9uljNjbYsZ';
+// GoHighLevel form "Set my AI voice budget" (VCPility AU). Leave empty until the form is built;
+// the calculator then sends people to the pricing enquiry form instead.
+const voiceBudgetFormId = '';
+// AI voice minutes included in each plan, and the price per extra minute (A$ + GST)
+const voiceIncluded = { Launch: 30, Elevate: 60, Dominate: 100 };
+const voiceRate = 0.68;
 ---
 
 <Layout
@@ -457,6 +463,63 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 	</section>
 
 	<!-- ============================================
+	     AI voice budget: clients estimate and set their monthly AI minutes
+	     ============================================ -->
+	<section class="chapter voice-budget" id="voice-budget">
+		<div class="container">
+			<p class="label reveal">AI Voice Budget</p>
+			<div class="chapter__head">
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">No surprises</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">on call minutes.</span></span>
+				</h2>
+				<p class="lead reveal" style="--d: 0.25s">
+					Your AI voice agent includes free minutes on Launch, Elevate and Dominate. Extra minutes are ${voiceRate.toFixed(2)} + GST, counted only while the AI is answering calls. Set a monthly budget and change it any time.
+				</p>
+			</div>
+
+			<div class="vb card reveal" data-voice-budget data-rate={voiceRate} data-included={JSON.stringify(voiceIncluded)} data-form-id={voiceBudgetFormId} data-form-host={formHost}>
+				<div class="vb__inputs">
+					<label class="vb__field">
+						<span>Your plan</span>
+						<select data-vb-plan>
+							<option>Launch</option>
+							<option selected>Elevate</option>
+							<option>Dominate</option>
+						</select>
+					</label>
+					<label class="vb__field">
+						<span>Calls the AI answers each month</span>
+						<input type="number" min="0" step="10" value="80" inputmode="numeric" data-vb-calls />
+					</label>
+					<label class="vb__field">
+						<span>Average minutes per call</span>
+						<input type="number" min="0.5" step="0.5" value="2.5" inputmode="decimal" data-vb-length />
+					</label>
+				</div>
+				<dl class="vb__results" aria-live="polite">
+					<div><dt>Estimated minutes</dt><dd data-vb-minutes>200</dd></div>
+					<div><dt>Included in your plan</dt><dd data-vb-included>60</dd></div>
+					<div><dt>Extra minutes</dt><dd data-vb-extra>140</dd></div>
+					<div class="vb__total"><dt>Estimated extra cost</dt><dd><span data-vb-cost>$95.20</span> <small>+ GST / month</small></dd></div>
+				</dl>
+				<div class="vb__budget">
+					<label class="vb__field">
+						<span>Your monthly minute budget</span>
+						<input type="number" min="0" step="10" value="200" inputmode="numeric" data-vb-budget />
+					</label>
+					<p class="vb__cap">The most you can pay for extra minutes: <strong data-vb-cap>$95.20 + GST</strong>. When you reach your budget, calls go to your mobile or voicemail instead.</p>
+					<a href="#plan-enquiry" class="btn btn--dark" data-vb-cta>
+						Set my AI voice budget
+						<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+					</a>
+				</div>
+				<div class="vb__form" data-vb-form hidden></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================
 	     02 Enterprise: the navy chapter, on a Flickering Grid
 	     ============================================ -->
 	<section class="chapter chapter--ink enterprise" data-pause-offscreen>
@@ -635,6 +698,54 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 					setBilling(button.dataset.billing as 'annual' | 'monthly');
 				}),
 			);
+		}
+	</script>
+
+	<script>
+		/* AI voice budget calculator */
+		const vb = document.querySelector<HTMLElement>('[data-voice-budget]');
+		if (vb) {
+			const rate = Number(vb.dataset.rate);
+			const included: Record<string, number> = JSON.parse(vb.dataset.included ?? '{}');
+			const formId = vb.dataset.formId ?? '';
+			const host = vb.dataset.formHost ?? '';
+			const q = <T extends HTMLElement>(sel: string) => vb.querySelector<T>(sel)!;
+			const plan = q<HTMLSelectElement>('[data-vb-plan]');
+			const calls = q<HTMLInputElement>('[data-vb-calls]');
+			const length = q<HTMLInputElement>('[data-vb-length]');
+			const budget = q<HTMLInputElement>('[data-vb-budget]');
+			const money = (n: number) => `$${n.toFixed(2)}`;
+			let budgetTouched = false;
+
+			const update = () => {
+				const minutes = Math.ceil(Math.max(0, Number(calls.value) || 0) * Math.max(0, Number(length.value) || 0));
+				const inc = included[plan.value] ?? 0;
+				const extra = Math.max(0, minutes - inc);
+				if (!budgetTouched) budget.value = String(Math.ceil(minutes / 10) * 10);
+				const cap = Math.max(0, (Number(budget.value) || 0) - inc) * rate;
+				q('[data-vb-minutes]').textContent = String(minutes);
+				q('[data-vb-included]').textContent = String(inc);
+				q('[data-vb-extra]').textContent = String(extra);
+				q('[data-vb-cost]').textContent = money(extra * rate);
+				q('[data-vb-cap]').textContent = `${money(cap)} + GST`;
+			};
+			[plan, calls, length].forEach((el) => el.addEventListener('input', update));
+			budget.addEventListener('input', () => {
+				budgetTouched = true;
+				update();
+			});
+			update();
+
+			// With a budget form in GoHighLevel, open it pre-filled; otherwise fall back to the pricing enquiry form
+			q<HTMLAnchorElement>('[data-vb-cta]').addEventListener('click', (event) => {
+				if (!formId) return;
+				event.preventDefault();
+				const params = new URLSearchParams({ voice_plan: plan.value, voice_minutes_budget: budget.value });
+				const wrap = q<HTMLElement>('[data-vb-form]');
+				wrap.innerHTML = `<iframe src="${host}/widget/form/${formId}?${params}" title="Set my AI voice budget" style="width:100%;height:640px;border:none;border-radius:12px" loading="lazy"></iframe>`;
+				wrap.hidden = false;
+				wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
 		}
 	</script>
 </Layout>
