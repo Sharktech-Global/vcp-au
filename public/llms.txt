@@ -1,0 +1,25 @@
+# VCPility
+
+> VCPility is an Australian-built AI automation and CRM platform for small and medium businesses, built and supported by Sharktech Global (Liverpool, NSW). It brings a CRM, AI chatbot, AI voice agent, online booking, Google review requests, email and SMS marketing, and reporting into one system, so businesses answer every enquiry in minutes.
+
+VCPility also provides website design and development, web applications, e-commerce, integrations and AI automation, and hosting and care plans. Pricing is published on the plans page and quoted in Australian dollars plus GST.
+
+## Key pages
+
+- [Home](https://www.vcpility.com.au/): what VCPility does and the industries it serves
+- [Features](https://www.vcpility.com.au/features): the full list of platform tools
+- [Plans and pricing](https://www.vcpility.com.au/plans): monthly and annual plans, add-ons and the AI voice budget calculator
+- [Web services](https://www.vcpility.com.au/web-services): website, web application, e-commerce and integration services
+- [About](https://www.vcpility.com.au/about-us): who VCPility is
+- [Built by Sharktech Global](https://www.vcpility.com.au/built-by-sharktech): the company behind VCPility, offices and support hours
+- [Contact](https://www.vcpility.com.au/contact): book a demo or get support
+
+## Guides
+
+- [Blog](https://www.vcpility.com.au/blog): practical guides on speed to lead, Google reviews, website enquiries and choosing a CRM in Australia
+
+## Contact
+
+- Email: growth@vcpility.com.au
+- Phone: +61 468 487 373
+- Support hours: Monday to Friday, 9 AM to 6 PM AEST
