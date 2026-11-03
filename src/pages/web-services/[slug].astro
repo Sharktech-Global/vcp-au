@@ -17,7 +17,7 @@ interface Props {
 }
 
 const { service, index } = Astro.props;
-const { title, headline, lead, facts, overview, image, included, steps, stack, faqs } = service;
+const { title, headline, lead, facts, overview, image, included, steps, stack, faqs, seoTitle, seoDescription, keywords } = service;
 const others = services
 	.map((s, i) => ({ ...s, num: i + 1 }))
 	.filter((s) => s.slug !== service.slug);
@@ -31,9 +31,49 @@ const brand = (i: number) => `var(--brand-${(i % 5) + 1})`;
 
 // The overview reads in word by word as it scrolls
 const overviewWords = overview.split(' ');
+
+// Structured data: the service, its questions and answers, and the breadcrumb trail
+const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const schema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: title,
+		description: seoDescription ?? lead,
+		url: pageUrl,
+		serviceType: title,
+		provider: { '@id': `${site}#organization` },
+		areaServed: { '@type': 'Country', name: 'Australia' },
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map(({ q, a }) => ({
+			'@type': 'Question',
+			name: q,
+			acceptedAnswer: { '@type': 'Answer', text: a },
+		})),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: site },
+			{ '@type': 'ListItem', position: 2, name: 'Web Services', item: new URL('/web-services', site).href },
+			{ '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+		],
+	},
+];
 ---
 
-<Layout title={`${title} | VCPility Web Services`} description={lead}>
+<Layout
+	title={seoTitle ?? `${title} | VCPility Web Services`}
+	description={seoDescription ?? lead}
+	keywords={keywords}
+	image={image.src}
+	schema={schema}
+>
 	<!-- ============================================
 	     Hero: breadcrumb, two-tone headline, facts strip
 	     ============================================ -->
