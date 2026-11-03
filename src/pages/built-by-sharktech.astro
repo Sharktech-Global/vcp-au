@@ -166,6 +166,13 @@ const faqs = [
 	},
 ];
 
+// FAQ structured data, so search and AI answer engines can quote these answers directly
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
+
 const offices = [
 	{ label: 'Sydney (Headquarters)', detail: 'Level 1, 244 Macquarie St, Liverpool NSW 2170' },
 	{ label: 'Melbourne', detail: 'Suite 383, 11 Wilson St, South Yarra VIC 3141' },
@@ -190,6 +197,7 @@ const sparkle = '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1
 	title="Built by Sharktech Global | VCPility"
 	description="VCPility is the growth platform inside Sharktech Global, a Sydney-based AI platform group. The same team engineers, hosts and supports your CRM, inbox, bookings and AI agents."
 	keywords="Sharktech Global, VCPility parent company, Australian AI platform group, Sydney AI company"
+	schema={faqSchema}
 >
 	<!-- ============================================
 	     Hero: headline and lead, then the group's fact file
