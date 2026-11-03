@@ -342,7 +342,7 @@ const industries = [
 	},
 	{
 		title: 'LYD Solar',
-		desc: 'Convert inquiries to installations with automated quote delivery and smart scheduling.',
+		desc: 'Convert enquiries to installations with automated quote delivery and smart scheduling.',
 		photo: solarPhoto,
 	},
 	{
@@ -357,13 +357,14 @@ const industries = [
 	},
 	{
 		title: 'Wellness',
-		desc: 'Nurture client relationships with personalized follow-ups and membership management.',
+		desc: 'Nurture client relationships with personalised follow-ups and membership management.',
 		photo: wellnessPhoto,
 	},
 	{
 		title: 'Trades',
-		desc: 'Streamline job requests, dispatch teams efficiently, and get paid faster.',
+		desc: 'Tradies are looked after by Launch Your Dream.ai, our sister platform built for trades businesses.',
 		photo: tradesPhoto,
+		href: 'https://launchyourdream.ai',
 	},
 ];
 ---
@@ -1026,9 +1027,9 @@ const industries = [
 			<div class="index" data-index>
 				<ol class="index__list">
 					{
-						industries.map(({ title, desc, photo }, i) => (
+						industries.map(({ title, desc, photo, href }, i) => (
 							<li class="reveal" style={`--d: ${i * 0.05}s`}>
-								<a href="/contact" class="index__row" data-index-item={i} aria-label={`${title}: ${desc}`}>
+								<a href={href ?? '/contact'} class="index__row" data-index-item={i} aria-label={`${title}: ${desc}`}>
 									<span class="index__num">{pad(i + 1)}</span>
 									<span class="index__thumb">
 										<Image src={photo} alt="" width={160} widths={[80, 160]} sizes="64px" loading="lazy" />
