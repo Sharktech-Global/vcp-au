@@ -20,6 +20,11 @@ export interface Service {
 	/** Page headline, split into the lines it reveals in */
 	headline: [string, string];
 	lead: string;
+	/** Search result title and description; fall back to the page title and lead */
+	seoTitle?: string;
+	seoDescription?: string;
+	/** Search terms this page targets */
+	keywords?: string;
 	/** Short facts under the hero */
 	facts: { label: string; value: string }[];
 	/** Opening statement for the overview section */
@@ -41,6 +46,9 @@ export const services: Service[] = [
 		tags: ['UX & UI design', 'Responsive build', 'CMS'],
 		headline: ['Websites that win', 'the enquiry.'],
 		lead: 'A custom website designed around how your customers decide, built to load fast, rank well and turn visitors into enquiries. Easy for your team to update once we hand it over.',
+		seoTitle: 'Custom Website Design and Development Sydney | VCPility',
+		seoDescription: 'Custom business and corporate websites designed and built by an Australian-led team in Sydney and Melbourne. Fast, mobile-first and wired into your CRM to turn visitors into enquiries.',
+		keywords: 'custom website design Sydney, corporate website developer, website development Australia, business website builder, web designer Melbourne',
 		facts: [
 			{ label: 'Best for', value: 'Businesses that need more enquiries' },
 			{ label: 'You get', value: 'Strategy, design, build & training' },
@@ -109,6 +117,9 @@ export const services: Service[] = [
 		tags: ['Portals', 'Dashboards', 'APIs'],
 		headline: ['Software built around', 'how you work.'],
 		lead: 'Client portals, dashboards and internal tools that replace spreadsheets and manual work. Engineered by the same team that builds and runs the Sharktech platforms.',
+		seoTitle: 'Custom Web Application Development Australia | VCPility',
+		seoDescription: 'Client portals, dashboards and internal tools built by an Australian-led development team. Replace spreadsheets and manual work with secure custom web applications.',
+		keywords: 'custom web application development Australia, client portal development, business dashboard development, web app developer Sydney',
 		facts: [
 			{ label: 'Best for', value: 'Teams outgrowing spreadsheets' },
 			{ label: 'You get', value: 'Product planning, build & support' },
@@ -177,6 +188,9 @@ export const services: Service[] = [
 		tags: ['Storefronts', 'Payments', 'Inventory sync'],
 		headline: ['Online stores that', 'sell more.'],
 		lead: 'Storefronts that load quickly, check out cleanly and connect to your stock, payments and shipping, so selling online takes less of your time.',
+		seoTitle: 'E-commerce Website Development Australia | VCPility',
+		seoDescription: 'Online stores built by an Australian-led team: fast product pages, clean checkout and stock, payment and shipping integrations, so selling online takes less of your time.',
+		keywords: 'e-commerce website development Australia, online store developer Sydney, Shopify developer Australia, e-commerce website design',
 		facts: [
 			{ label: 'Best for', value: 'Retailers and product brands' },
 			{ label: 'You get', value: 'Store design, build & integrations' },
@@ -245,6 +259,9 @@ export const services: Service[] = [
 		tags: ['CRM', 'AI chatbots', 'Workflows'],
 		headline: ['Every enquiry answered,', 'day or night.'],
 		lead: 'We connect your website to your CRM, bookings and inbox, then put AI agents to work answering, qualifying and following up every enquiry, around the clock.',
+		seoTitle: 'AI Agents and Business Automation Australia | VCPility',
+		seoDescription: 'Australian AI agent deployment for small and medium businesses: AI chatbots, AI voice agents, CRM integration and automated follow-up that answer every enquiry, day and night.',
+		keywords: 'AI agent deployment Australia, agentic AI for business, AI voice agent, AI chatbot for business, business automation NSW, AI automation Victoria',
 		facts: [
 			{ label: 'Best for', value: 'Teams losing leads to slow replies' },
 			{ label: 'You get', value: 'Connected tools & AI agents' },
@@ -313,6 +330,9 @@ export const services: Service[] = [
 		tags: ['Technical SEO', 'Core Web Vitals', 'Analytics'],
 		headline: ['Found faster.', 'Loaded faster.'],
 		lead: 'Technical SEO, speed optimisation and analytics that help the right customers find you, then make sure your site is quick enough to keep them.',
+		seoTitle: 'Technical SEO and Website Speed Optimisation | VCPility',
+		seoDescription: 'Technical SEO, answer engine optimisation, structured data and speed improvements from an Australian-led team, so the right customers find your business in Google and AI search.',
+		keywords: 'technical SEO Australia, website speed optimisation, AEO, answer engine optimisation, local SEO Sydney, SEO services NSW',
 		facts: [
 			{ label: 'Best for', value: 'Sites that should rank higher' },
 			{ label: 'You get', value: 'Audit, fixes & clear reporting' },
@@ -381,6 +401,9 @@ export const services: Service[] = [
 		tags: ['Managed hosting', 'Security', 'Maintenance'],
 		headline: ['Always on.', 'Always looked after.'],
 		lead: 'Secure managed hosting, updates, backups and monitoring, with a local team in Sydney and Melbourne on call during business hours when you need a hand.',
+		seoTitle: 'Managed Website Hosting and Care Plans Australia | VCPility',
+		seoDescription: 'Secure managed website hosting with updates, backups and monitoring, supported by an Australian-led team in Sydney and Melbourne during business hours.',
+		keywords: 'managed website hosting Australia, website care plan, website maintenance Sydney, WordPress hosting Australia',
 		facts: [
 			{ label: 'Best for', value: 'Any site that needs to stay online' },
 			{ label: 'You get', value: 'Hosting, updates & real support' },

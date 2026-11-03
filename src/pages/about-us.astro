@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import dainuPhoto from '../assets/about/dainu-devis.jpg';
+import sameerPhoto from '../assets/about/sameer-mohan.jpg';
 import '../styles/pages/about.css';
 
 const pad = (n: number) => String(n).padStart(2, '0');
@@ -99,11 +102,59 @@ const contactCards = [
 		icon: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
 	},
 ];
+
+// Leadership: the people accountable for VCPility, with the credentials behind them
+const leaders = [
+	{
+		name: 'Dainu Devis',
+		role: 'Chief Executive Officer, Sharktech Global and Divine Lab Worx',
+		photo: dainuPhoto,
+		bio: 'A business and economic strategist and an international business consultant for more than a decade. Dainu advises on artificial intelligence, data engineering and GPU data centres, and holds a Master of Engineering Science from UNSW, specialising in concurrent product and process design.',
+		credentials: [
+			'International business consultant for more than 10 years, recognised as a Guidepoint expert network consultant',
+			'Artificial intelligence, data engineering and GPU data centre advisory',
+			'Led the Australian launch of VCPility, Flagman.ai, Launch Your Dream.ai and AccrualOS',
+			'Former Area Manager for more than 2,200 Telstra critical infrastructure sites across NSW',
+		],
+		url: 'https://dainudevis.com',
+	},
+	{
+		name: 'Sameer Mohan',
+		role: 'Co-Founder and Chief Growth Officer',
+		photo: sameerPhoto,
+		bio: 'Sameer co-founded Sharktech Global and leads its growth, taking VCPility and the group’s platforms to more Australian businesses.',
+		credentials: [],
+		url: undefined,
+	},
+];
+
+// Leadership structured data, so search and AI answer engines connect each person to VCPility
+const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
+const leadershipSchema = leaders.map(({ name, role, bio, url }) => ({
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name,
+	jobTitle: role,
+	description: bio,
+	worksFor: [
+		{ '@type': 'Organization', name: 'Sharktech Global', url: 'https://sharktech.com.au' },
+		...(name === 'Dainu Devis' ? [{ '@type': 'Organization', name: 'Divine Lab Worx', url: 'https://divinelabworx.com' }] : []),
+	],
+	...(name === 'Dainu Devis'
+		? {
+				alumniOf: { '@type': 'CollegeOrUniversity', name: 'UNSW Sydney' },
+				alternateName: 'DD Devis',
+				knowsAbout: ['International business consulting', 'Business and economic strategy', 'Artificial intelligence', 'Data engineering', 'GPU data centres', 'Concurrent product and process design'],
+			}
+		: {}),
+	...(url ? { url, sameAs: [url] } : {}),
+}));
 ---
 
 <Layout
-	title="About Us | VCPility"
-	description="VCPility, from Sharktech Global: AI that amplifies human potential for Australian businesses."
+	title="About VCPility | Australian AI Automation Platform"
+	description="VCPility is an Australian-led AI automation and CRM platform from Sharktech Global, helping small and medium businesses win more leads and reviews with less admin."
+	schema={leadershipSchema}
 >
 	<!-- ============================================
 	     Hero: headline, then the leadership quote on a shader panel
@@ -338,6 +389,55 @@ const contactCards = [
 	</section>
 
 	<!-- ============================================
+	     04 Leadership: who is accountable for VCPility
+	     ============================================ -->
+	<section class="chapter about-leaders" id="leadership">
+		<div class="container">
+			<p class="label reveal"><span class="label__num">04</span>Leadership</p>
+
+			<div class="chapter__head">
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">The People</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">Behind VCPility</span></span>
+				</h2>
+				<p class="lead reveal" style="--d: 0.25s">
+					Australian-led and accountable. The leadership of Sharktech Global stands behind every VCPility client.
+				</p>
+			</div>
+
+			<ul class="about-leaders__grid">
+				{
+					leaders.map(({ name, role, photo, bio, credentials, url }, i) => (
+						<li class="about-leader reveal" style={`--d: ${i * 0.1}s`}>
+							<figure class="about-leader__photo">
+								<Image src={photo} alt={`${name}, ${role}, Sharktech Global`} width={416} height={480} loading="lazy" />
+								<figcaption>
+									<span class="about-leader__name">{name}</span>
+									<span class="about-leader__role">{role}</span>
+								</figcaption>
+							</figure>
+							<p class="about-leader__bio">{bio}</p>
+							{credentials.length > 0 && (
+								<ul class="about-leader__creds">
+									{credentials.map((item) => (
+										<li>{item}</li>
+									))}
+								</ul>
+							)}
+							{url && (
+								<a href={url} class="btn btn--link about-leader__link" target="_blank" rel="noopener">
+									More about {name.split(' ')[0]}
+									<svg viewBox="0 0 24 24" aria-hidden="true" set:html={externalIcon} />
+								</a>
+							)}
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- ============================================
 	     Closing CTA: shader panel with Ripple rings
 	     ============================================ -->
 	<section class="finale about-finale">
@@ -372,11 +472,11 @@ const contactCards = [
 	</section>
 
 	<!-- ============================================
-	     04 Contact
+	     05 Contact
 	     ============================================ -->
 	<section class="chapter about-talk">
 		<div class="container">
-			<p class="label reveal"><span class="label__num">04</span>Get In Touch</p>
+			<p class="label reveal"><span class="label__num">05</span>Get In Touch</p>
 
 			<div class="chapter__head">
 				<h2 class="display reveal-lines" style="--d: 0.1s">

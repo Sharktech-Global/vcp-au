@@ -10,6 +10,26 @@ import '../styles/pages/web-services.css';
 /* Photos are CC0 (public domain) from StockSnap.io: no licence fee or credit required. */
 
 const pad = (n: number) => String(n).padStart(2, '0');
+
+// Structured data: the list of services, each linking to its own page
+const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
+const servicesSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: 'VCPility web and AI services',
+	itemListElement: services.map((service, i) => ({
+		'@type': 'ListItem',
+		position: i + 1,
+		item: {
+			'@type': 'Service',
+			name: service.title,
+			description: service.seoDescription ?? service.lead,
+			url: new URL(`/web-services/${service.slug}`, site).href,
+			provider: { '@id': `${site}#organization` },
+			areaServed: { '@type': 'Country', name: 'Australia' },
+		},
+	})),
+};
 const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
 
 // The logo's five colour bars, used as small accents (index 0-4 maps to --brand-1 … --brand-5)
@@ -111,9 +131,10 @@ const steps = [
 ---
 
 <Layout
-	title="Web Services & Development | VCPility"
-	description="VCPility is the web services and development arm of Sharktech Global. Websites, web apps, e-commerce and integrations, designed, engineered and supported by an experienced Australian team."
-	keywords="web development Australia, website design Sydney, web applications, e-commerce development, Sharktech Global, VCPility"
+	title="Website Development and AI Automation Services Australia | VCPility"
+	description="Custom websites, web applications, e-commerce, AI agents and automation, SEO and managed hosting, designed, built and supported by an Australian-led team in Sydney and Melbourne."
+	keywords="web development Australia, custom website design Sydney, corporate website builder, AI agent deployment Australia, AI automation for business, web applications, e-commerce development"
+	schema={servicesSchema}
 >
 	<!-- ============================================
 	     Hero: flickering grid behind the two-tone title

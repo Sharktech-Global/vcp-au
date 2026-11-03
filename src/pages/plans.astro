@@ -52,14 +52,13 @@ const plans: Plan[] = [
 	{
 		name: 'Launch',
 		type: 'Foundation package',
-		price: { annual: 170, monthly: 190 },
+		price: { annual: 70, monthly: 85 },
 		pitch: {
 			title: 'AI-powered marketing partner',
 			text: 'For sole traders ready to build their digital footprint with professional support.',
 		},
 		includesLabel: 'Everything in Starter, plus',
 		features: [
-			'AI voice agent',
 			'AI chatbot for website forms',
 			'AI chatbot for Facebook and Instagram',
 			'Automatic Google review monitoring',
@@ -75,13 +74,14 @@ const plans: Plan[] = [
 		type: 'Professional package',
 		featured: true,
 		badge: 'Best for growing trades',
-		price: { annual: 460, monthly: 529 },
+		price: { annual: 300, monthly: 360 },
 		pitch: {
 			title: 'AI-powered growth team',
 			text: 'For established traders and medium-sized businesses ready to win their local market.',
 		},
 		includesLabel: 'Everything in Launch, plus',
 		features: [
+			'AI voice agent',
 			'StoryBrand website',
 			'AI chat',
 			'Basic SEO',
@@ -99,7 +99,7 @@ const plans: Plan[] = [
 		name: 'Dominate',
 		type: 'Premium package',
 		badge: 'Most complete',
-		price: { annual: 710, monthly: 749 },
+		price: { annual: 490, monthly: 590 },
 		pitch: {
 			title: 'AI-powered marketing department',
 			text: 'For multi-site businesses that need marketing done across every location.',
@@ -107,14 +107,13 @@ const plans: Plan[] = [
 		includesLabel: 'Everything in Elevate, plus',
 		features: [
 			'Advanced SEO and AEO',
-			'Google and Meta ads management',
 			'New webpage monthly',
 			'Landing pages',
 			'Social media management',
 			'Advanced AI chatbot',
 			'Monthly SEO and AEO report',
 		],
-		note: 'Ads management included. A 15% admin fee applies to your ad spend, which you pay directly to Google and Meta.',
+		note: 'Add Google and Meta ads management for $300 + GST a month billed annually, or $350 + GST month to month.',
 		cta: { label: 'Scale Your Business', style: 'dark' },
 	},
 	{
@@ -188,7 +187,7 @@ const addOns = [
 		art: 'ads',
 		title: 'Ads Management',
 		price: 'AU$300 + GST/month billed annually, or AU$350 + GST month to month',
-		text: 'Expert management of your Google and Meta ad campaigns. For Launch and Elevate. Covers up to AU$3,000 in monthly ad spend; 15% of spend applies above that. Included in Dominate.',
+		text: 'Expert management of your Google and Meta ad campaigns, available on every plan. Covers up to AU$3,000 in monthly ad spend; 15% of spend applies above that.',
 		icon: '<path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
 	},
 	{
@@ -233,13 +232,13 @@ const planFormId = 'EM6FhotBuN9uljNjbYsZ';
 // the calculator then sends people to the pricing enquiry form instead.
 const voiceBudgetFormId = '';
 // AI voice minutes included in each plan, and the price per extra minute (A$ + GST)
-const voiceIncluded = { Launch: 30, Elevate: 60, Dominate: 100 };
+const voiceIncluded = { Elevate: 60, Dominate: 100 };
 const voiceRate = 0.68;
 ---
 
 <Layout
-	title="Plans | VCPility"
-	description="Flexible VCPility plans for every business, from sole traders to national brands. Annual and monthly billing."
+	title="Pricing and Plans for Australian Small Businesses | VCPility"
+	description="Transparent VCPility pricing for Australian businesses, from sole traders to growing teams. Compare plans for CRM, AI chatbot, AI voice and marketing, billed monthly or annually."
 >
 	<!-- ============================================
 	     Hero: title left, lead and the billing toggle right
@@ -474,7 +473,7 @@ const voiceRate = 0.68;
 					<span class="line" style="--i: 1"><span class="line__inner muted">on call minutes.</span></span>
 				</h2>
 				<p class="lead reveal" style="--d: 0.25s">
-					Your AI voice agent includes free minutes on Launch, Elevate and Dominate. Extra minutes are ${voiceRate.toFixed(2)} + GST, counted only while the AI is answering calls. Set a monthly budget and change it any time.
+					Your AI voice agent includes free minutes on Elevate and Dominate. Extra minutes are ${voiceRate.toFixed(2)} + GST, counted only while the AI is answering calls. Set a monthly budget and change it any time.
 				</p>
 			</div>
 
@@ -483,7 +482,6 @@ const voiceRate = 0.68;
 					<label class="vb__field">
 						<span>Your plan</span>
 						<select data-vb-plan>
-							<option>Launch</option>
 							<option selected>Elevate</option>
 							<option>Dominate</option>
 						</select>

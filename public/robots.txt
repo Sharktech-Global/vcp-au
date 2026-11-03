@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /onboarding
+Disallow: /reference-check
+
+Sitemap: https://www.vcpility.com.au/sitemap-index.xml
