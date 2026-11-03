@@ -1,6 +1,6 @@
 # VCPility
 
-> VCPility is an Australian-built AI automation and CRM platform for small and medium businesses, built and supported by Sharktech Global (Liverpool, NSW). It brings a CRM, AI chatbot, AI voice agent, online booking, Google review requests, email and SMS marketing, and reporting into one system, so businesses answer every enquiry in minutes.
+> VCPility is an Australian-built AI automation and CRM platform for professional services firms (accountants, bookkeepers, financial planners, mortgage brokers) and start-ups, built and supported by Sharktech Global (Liverpool, NSW). It brings a CRM, AI chatbot, AI voice agent, online booking, Google review requests, email and SMS marketing, and reporting into one system, so businesses answer every enquiry in minutes.
 
 VCPility also provides website design and development, web applications, e-commerce, integrations and AI automation, and hosting and care plans. Pricing is published on the plans page and quoted in Australian dollars plus GST.
 
@@ -9,6 +9,12 @@ VCPility also provides website design and development, web applications, e-comme
 - [Home](https://www.vcpility.com.au/): what VCPility does and the industries it serves
 - [Features](https://www.vcpility.com.au/features): the full list of platform tools
 - [Plans and pricing](https://www.vcpility.com.au/plans): monthly and annual plans, add-ons and the AI voice budget calculator
+- [For accountants](https://www.vcpility.com.au/industries/accountants): CRM, AI voice agent and follow-up for accounting firms
+- [For bookkeepers](https://www.vcpility.com.au/industries/bookkeepers): CRM and client onboarding automation for bookkeepers
+- [For financial planners](https://www.vcpility.com.au/industries/financial-planners): lead management and nurture for advice practices
+- [For mortgage brokers](https://www.vcpility.com.au/industries/mortgage-brokers): AI first response and follow-up for brokers
+- [For start-ups](https://www.vcpility.com.au/industries/startups): done-for-you CRM, AI agents and automation for founders
+- [AI receptionist for accountants](https://www.vcpility.com.au/industries/ai-receptionist-for-accountants): AI phone answering and booking for accounting firms
 - [Web services](https://www.vcpility.com.au/web-services): website, web application, e-commerce and integration services
 - [About](https://www.vcpility.com.au/about-us): who VCPility is
 - [Built by Sharktech Global](https://www.vcpility.com.au/built-by-sharktech): the company behind VCPility, offices and support hours

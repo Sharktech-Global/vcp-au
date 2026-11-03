@@ -30,19 +30,19 @@ type Plan = {
 const plans: Plan[] = [
 	{
 		name: 'Starter',
-		type: 'On the tools',
+		type: 'Front desk package',
 		badge: 'New',
 		price: { annual: 50, monthly: 50 },
 		fixedNote: 'Same price monthly or annually. Live in 60 minutes.',
 		pitch: {
 			title: 'Your AI front desk',
-			text: 'For sole traders who need every enquiry caught and booked, without a big monthly bill.',
+			text: 'For founders and sole practitioners who need every enquiry caught and booked, without a big monthly bill.',
 		},
 		includesLabel: 'Includes',
 		features: [
 			'Website chat widget',
 			'Online booking calendar',
-			'CRM for every call, quote and job',
+			'CRM for every call, enquiry and booking',
 			'Centralised inbox',
 			'Mobile app',
 			'Google Business Profile integration',
@@ -55,7 +55,7 @@ const plans: Plan[] = [
 		price: { annual: 70, monthly: 85 },
 		pitch: {
 			title: 'AI-powered marketing partner',
-			text: 'For sole traders ready to build their digital footprint with professional support.',
+			text: 'For new firms and start-ups ready to build their digital footprint with professional support.',
 		},
 		includesLabel: 'Everything in Starter, plus',
 		features: [
@@ -73,11 +73,11 @@ const plans: Plan[] = [
 		name: 'Elevate',
 		type: 'Professional package',
 		featured: true,
-		badge: 'Best for growing trades',
+		badge: 'Best for growing firms',
 		price: { annual: 300, monthly: 360 },
 		pitch: {
 			title: 'AI-powered growth team',
-			text: 'For established traders and medium-sized businesses ready to win their local market.',
+			text: 'For established accounting, finance and professional services firms ready to win their local market.',
 		},
 		includesLabel: 'Everything in Launch, plus',
 		features: [
@@ -238,7 +238,7 @@ const voiceRate = 0.68;
 
 <Layout
 	title="Pricing and Plans for Australian Small Businesses | VCPility"
-	description="Transparent VCPility pricing for Australian businesses, from sole traders to growing teams. Compare plans for CRM, AI chatbot, AI voice and marketing, billed monthly or annually."
+	description="Transparent VCPility pricing for Australian professional services firms, from founders to growing teams. Compare plans for CRM, AI chatbot, AI voice and marketing, billed monthly or annually."
 >
 	<!-- ============================================
 	     Hero: title left, lead and the billing toggle right
