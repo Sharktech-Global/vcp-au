@@ -16,10 +16,14 @@ const columns = [
 	},
 	{
 		heading: 'Industries',
-		links: ['Real Estate', 'Solar', 'Dental', 'Trades', 'Coaching'].map((label) => ({
-			href: '/#built-for-you',
-			label,
-		})),
+		links: [
+			{ href: '/industries/accountants', label: 'Accountants' },
+			{ href: '/industries/bookkeepers', label: 'Bookkeepers' },
+			{ href: '/industries/financial-planners', label: 'Financial Planners' },
+			{ href: '/industries/mortgage-brokers', label: 'Mortgage Brokers' },
+			{ href: '/industries/startups', label: 'Start-ups' },
+			{ href: 'https://launchyourdream.ai', label: 'Trades (Launch Your Dream)' },
+		],
 	},
 	{
 		heading: 'Company',
