@@ -1,0 +1,384 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import { industries, type Industry } from '../../data/industries';
+import '../../styles/pages/service.css';
+
+export const getStaticPaths = (() =>
+	industries.map((industry) => ({
+		params: { slug: industry.slug },
+		props: { industry },
+	}))) satisfies GetStaticPaths;
+
+interface Props {
+	industry: Industry;
+}
+
+const { industry } = Astro.props;
+const { name, title, headline, lead, facts, overview, image, problems, included, steps, tools, faqs, seoTitle, seoDescription, keywords } = industry;
+const others = industries
+	.map((s, i) => ({ ...s, num: i + 1 }))
+	.filter((s) => s.slug !== industry.slug);
+
+const pad = (n: number) => String(n).padStart(2, '0');
+const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
+const check = '<path d="M20 6 9 17l-5-5"/>';
+
+// The logo's five colour bars, used as small accents (index 0-4 maps to --brand-1 … --brand-5)
+const brand = (i: number) => `var(--brand-${(i % 5) + 1})`;
+
+// The overview reads in word by word as it scrolls
+const overviewWords = overview.split(' ');
+
+// Structured data: the service for this industry, its questions and answers, and the breadcrumb trail
+const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const schema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: title,
+		description: seoDescription,
+		url: pageUrl,
+		serviceType: title,
+		audience: { '@type': 'BusinessAudience', audienceType: name },
+		provider: { '@id': `${site}#organization` },
+		areaServed: { '@type': 'Country', name: 'Australia' },
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map(({ q, a }) => ({
+			'@type': 'Question',
+			name: q,
+			acceptedAnswer: { '@type': 'Answer', text: a },
+		})),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: site },
+			{ '@type': 'ListItem', position: 2, name: title, item: pageUrl },
+		],
+	},
+];
+---
+
+<Layout
+	title={seoTitle}
+	description={seoDescription}
+	keywords={keywords}
+	image={image.src}
+	schema={schema}
+>
+	<!-- ============================================
+	     Hero: breadcrumb, two-tone headline, facts strip
+	     ============================================ -->
+	<section class="page-hero svc-hero" data-pause-offscreen>
+		<canvas class="svc-hero__grid" aria-hidden="true" data-flicker-grid></canvas>
+
+		<div class="container">
+			<nav class="svc-crumbs reveal" aria-label="Breadcrumb">
+				<a href="/">Home</a>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+				<span aria-current="page">{name}</span>
+			</nav>
+
+			<p class="label reveal" style="--d: 0.04s">
+				<span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+				Industries · {name}
+			</p>
+
+			<div class="page-hero__grid">
+				<h1 class="page-hero__title reveal-lines" style="--d: 0.08s">
+					{
+						headline.map((text, i) => (
+							<span class="line" style={`--i: ${i}`}>
+								<span class:list={['line__inner', i === headline.length - 1 && 'muted']}>{text}</span>
+							</span>
+						))
+					}
+				</h1>
+
+				<div>
+					<p class="lead reveal" style="--d: 0.2s">{lead}</p>
+					<div class="page-hero__buttons reveal" style="--d: 0.28s">
+						<a href="/contact" class="btn btn--accent btn--shine" data-magnetic>
+							Book a demo
+							<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+						</a>
+						<a href="/plans" class="btn btn--link">See pricing</a>
+					</div>
+				</div>
+			</div>
+
+			<dl class="svc-facts">
+				{
+					facts.map(({ label, value }, i) => (
+						<div class="reveal" style={`--d: ${0.3 + i * 0.06}s; --c: ${brand(i * 2)}`}>
+							<dt>{label}</dt>
+							<dd>{value}</dd>
+						</div>
+					))
+				}
+			</dl>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     01 Overview: statement (Text Reveal) and a wide photo
+	     ============================================ -->
+	<section class="chapter svc-overview">
+		<div class="container">
+			<p class="label reveal"><span class="label__num">01</span>Overview</p>
+
+			<p class="svc-overview__statement" data-scroll-text>
+				{
+					overviewWords.map((word, i) => (
+						<span class="w" style={`--w: ${(i / overviewWords.length).toFixed(3)}`}>
+							{word}{' '}
+						</span>
+					))
+				}
+			</p>
+
+			<figure class="svc-figure" data-reveal>
+				<div class="svc-figure__frame">
+					<Image
+						src={image.src}
+						alt={image.alt}
+						widths={[800, 1400, 2000, 2400]}
+						sizes="90vw"
+						style={image.position ? `object-position: ${image.position}` : undefined}
+					/>
+				</div>
+				<figcaption><span>{image.label}</span> {image.caption}</figcaption>
+			</figure>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     02 The problem: where this industry loses new clients today
+	     ============================================ -->
+	<section class="chapter svc-included" id="problem">
+		<div class="container">
+			<p class="label reveal"><span class="label__num">02</span>The problem</p>
+
+			<div class="chapter__head">
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">Where new clients</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">slip away.</span></span>
+				</h2>
+			</div>
+
+			<ul class="svc-grid">
+				{
+					problems.map(({ title: item, desc }, i) => (
+						<li class="svc-grid__item reveal" style={`--d: ${(i % 3) * 0.06}s`}>
+							<div class="card" data-spotlight>
+								<div class="svc-grid__head">
+									<span class="svc-grid__num">{pad(i + 1)}</span>
+								</div>
+								<h3>{item}</h3>
+								<p>{desc}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     03 The solution: surface cards (Magic Card spotlight)
+	     ============================================ -->
+	<section class="chapter svc-included" id="included">
+		<div class="container">
+			<p class="label reveal"><span class="label__num">03</span>The solution</p>
+
+			<div class="chapter__head">
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">What VCPility</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">sets up for you.</span></span>
+				</h2>
+				<p class="lead reveal" style="--d: 0.2s">
+					Done for you by an Australian-led team. One system, one point of contact.
+				</p>
+			</div>
+
+			<ul class="svc-grid">
+				{
+					included.map(({ title: item, desc }, i) => (
+						<li class="svc-grid__item reveal" style={`--d: ${(i % 3) * 0.06}s`}>
+							<div class="card" data-spotlight>
+								<div class="svc-grid__head">
+									<span class="svc-grid__num">{pad(i + 1)}</span>
+									<svg viewBox="0 0 24 24" aria-hidden="true" set:html={check} data-draw />
+								</div>
+								<h3>{item}</h3>
+								<p>{desc}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     04 How we deliver: the ink chapter, four steps on a rail
+	     with a travelling beam (Animated Beam), on a Flickering Grid
+	     ============================================ -->
+	<section class="chapter chapter--ink svc-process" data-pause-offscreen>
+		<canvas class="svc-process__grid" aria-hidden="true" data-flicker-grid data-flicker-color="255, 255, 255"></canvas>
+
+		<div class="container">
+			<p class="label reveal"><span class="label__num">04</span>How we deliver</p>
+
+			<div class="chapter__head">
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">Four clear steps.</span></span>
+				</h2>
+				<p class="lead reveal" style="--d: 0.2s">
+					You'll know what's happening, what's next and what it costs at every stage.
+				</p>
+			</div>
+
+			<ol class="svc-steps" data-reveal>
+				<li class="svc-steps__rail" aria-hidden="true"><span></span></li>
+				{
+					steps.map(({ title: step, desc }, i) => (
+						<li class="svc-step" style={`--i: ${i}`}>
+							<span class="svc-step__node" aria-hidden="true">
+								{pad(i + 1)}
+							</span>
+							<h3>{step}</h3>
+							<p>{desc}</p>
+						</li>
+					))
+				}
+			</ol>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     Technologies: a single ruled band of chips
+	     ============================================ -->
+	<section class="svc-stack">
+		<div class="container svc-stack__inner">
+			<p class="svc-stack__label reveal">Built into your system</p>
+			<ul class="svc-stack__list">
+				{
+					tools.map((item, i) => (
+						<li class="reveal" style={`--d: ${i * 0.04}s; --c: ${brand(i)}`}>
+							{item}
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     05 FAQ: sticky heading beside the accordion
+	     ============================================ -->
+	<section class="chapter svc-faq">
+		<div class="container svc-faq__grid">
+			<div class="svc-faq__head">
+				<p class="label reveal"><span class="label__num">05</span>FAQ</p>
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">Questions,</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">answered.</span></span>
+				</h2>
+			</div>
+			<div class="svc-faq__list reveal" style="--d: 0.15s">
+				{
+					faqs.map(({ q, a }, i) => (
+						<details open={i === 0}>
+							<summary>
+								{q}
+								<span class="svc-faq__icon" aria-hidden="true" />
+							</summary>
+							<p>{a}</p>
+						</details>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     Closing CTA: shader panel with Ripple rings (Magic UI)
+	     ============================================ -->
+	<section class="finale">
+		<div class="container">
+			<div class="finale__panel" data-pause-offscreen>
+				<canvas class="shader" aria-hidden="true" data-shader></canvas>
+				<span class="ripple" aria-hidden="true">
+					{[0, 1, 2, 3, 4].map((n) => <span style={`--n: ${n}`} />)}
+				</span>
+
+				<div class="finale__inner">
+					<span class="bars bars--light reveal" aria-hidden="true"
+						><span></span><span></span><span></span><span></span><span></span></span
+					>
+					<h2 class="finale__title reveal-lines" style="--d: 0.1s">
+						<span class="line"><span class="line__inner">See it working</span></span>
+						<span class="line" style="--i: 1"><span class="line__inner">for your firm.</span></span>
+					</h2>
+					<p class="finale__text reveal" style="--d: 0.25s">
+						Book a 30-minute demo. We will show you where enquiries are being lost and how VCPility catches them.
+					</p>
+					<div class="finale__buttons reveal" style="--d: 0.3s">
+						<a href="/contact" class="btn btn--light btn--shine" data-magnetic>
+							Book a demo
+							<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+						</a>
+						<a href="mailto:growth@vcpility.com.au" class="btn btn--link btn--on-ink">growth@vcpility.com.au</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================
+	     06 More industries: an index of the other pages
+	     ============================================ -->
+	<section class="chapter svc-more">
+		<div class="container">
+			<p class="label reveal"><span class="label__num">06</span>More industries</p>
+
+			<div class="chapter__head">
+				<h2 class="display reveal-lines" style="--d: 0.1s">
+					<span class="line"><span class="line__inner">Who else</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">we work with.</span></span>
+				</h2>
+				<p class="lead reveal" style="--d: 0.2s">
+					<a href="/plans" class="btn btn--link">
+						Compare plans
+						<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+					</a>
+				</p>
+			</div>
+
+			<ul class="svc-more__list">
+				{
+					others.map(({ slug, name, summary, num }, i) => (
+						<li class="reveal" style={`--d: ${i * 0.05}s`}>
+							<a href={`/industries/${slug}`} class="svc-more__item" aria-label={`${name}: ${summary}`}>
+								<span class="svc-more__num">{pad(num)}</span>
+								<span class="svc-more__title" data-scramble>
+									{name}
+								</span>
+								<span class="svc-more__desc">{summary}</span>
+								<svg class="svc-more__arrow" viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+</Layout>
