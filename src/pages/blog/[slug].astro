@@ -21,7 +21,7 @@ interface Props {
 }
 
 const { post, others } = Astro.props;
-const { title, description, category, date, author, cover, coverAlt } = post.data;
+const { title, description, category, date, author, cover, coverAlt, seoTitle, seoDescription } = post.data;
 const { Content, headings } = await render(post);
 const sections = headings.filter((h) => h.depth === 2);
 // Posts whose headings carry their own numbers ("1. ...") skip the contents counters
@@ -66,8 +66,8 @@ const facts = [
 ---
 
 <Layout
-	title={`${title} | VCPility Blog`}
-	description={description}
+	title={seoTitle ?? `${title} | VCPility Blog`}
+	description={seoDescription ?? description}
 	ogType="article"
 	image={cover}
 	publishedTime={date.toISOString()}
