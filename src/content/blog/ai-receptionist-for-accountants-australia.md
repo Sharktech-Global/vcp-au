@@ -4,6 +4,8 @@ description: 'Most AI receptionist tools ranking in Australia are built overseas
 category: Accountants
 date: 2026-11-04
 author: 'VCPility Team, Sharktech Global'
+seoTitle: 'AI Receptionist for Accountants in Australia | VCPility'
+seoDescription: 'What Australian accounting firms should check before buying an AI receptionist, and how the VCPility AI receptionist, built by Sharktech Global, compares.'
 cover: ../../assets/web-services/services/integrations-ai-automation.jpg
 coverAlt: 'A smiling woman holding a smartphone, reading a message'
 ---

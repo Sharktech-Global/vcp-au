@@ -4,6 +4,8 @@ description: 'Advice software is built for compliance and client records. Very l
 category: Financial Planners
 date: 2026-11-04
 author: 'VCPility Team, Sharktech Global'
+seoTitle: 'CRM for Financial Planners in Australia | VCPility'
+seoDescription: 'How Australian advice practices turn more enquiries into first meetings, what to look for in a CRM, and how VCPility by Sharktech Global helps.'
 cover: ../../assets/web-services/team.jpg
 coverAlt: 'A small team talking around a wooden table with notebooks, drinks and an open laptop'
 ---

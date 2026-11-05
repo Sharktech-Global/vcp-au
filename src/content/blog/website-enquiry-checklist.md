@@ -3,6 +3,8 @@ title: 'Is Your Website Costing You Enquiries? A 10-Point Check'
 description: 'A good-looking website can still leak customers. Run through these ten checks in half an hour to find what is stopping visitors from getting in touch.'
 category: Websites
 date: 2026-09-08
+seoTitle: 'Website Enquiry Checklist: 10 Quick Checks | VCPility'
+seoDescription: 'Ten checks you can run in half an hour to find what is stopping visitors to your small business website from getting in touch.'
 cover: ../../assets/web-services/services/seo-performance.jpg
 coverAlt: 'A laptop on a desk showing website analytics charts, with a phone beside it'
 ---

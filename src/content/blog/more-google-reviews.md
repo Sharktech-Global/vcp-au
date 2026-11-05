@@ -3,6 +3,8 @@ title: 'How to Get More Google Reviews (Without the Awkward Ask)'
 description: 'Happy customers rarely leave reviews on their own. A simple, well-timed system can change that, and it keeps you on the right side of Google and Australian consumer law.'
 category: Reviews
 date: 2026-09-22
+seoTitle: 'How to Get More Google Reviews in Australia | VCPility'
+seoDescription: 'A simple, well-timed review request system for Australian small businesses that stays within Google policy and Australian consumer law.'
 cover: ../../assets/home/industries/dental.jpg
 coverAlt: 'A dentist in blue scrubs treating a young patient in a modern dental chair'
 ---
