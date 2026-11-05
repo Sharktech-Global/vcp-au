@@ -96,7 +96,7 @@ For bookkeepers, it does one job well: turning enquiries into booked discovery c
 
 The AI handles the first conversation. It does not give tax or BAS advice. When a prospect asks a technical question, it books a call with you or your registered team.
 
-Plans start at $50 + GST a month for the Starter front desk package. The AI voice agent is included on Elevate, at $300 + GST a month. Every plan and inclusion is listed on the [plans page](/plans).
+Plans start at $50 + GST a month for the Starter front desk package. The AI voice agent is included on Elevate, from $300 + GST a month billed annually, or $360 + GST month to month. Every plan and inclusion is listed on the [plans page](/plans).
 
 See what is set up for your practice on the [VCPility for bookkeepers](/industries/bookkeepers) page. If you refer work to an accounting firm, the [VCPility for accountants](/industries/accountants) page shows how the same system works for them.
 
