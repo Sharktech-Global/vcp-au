@@ -3,6 +3,7 @@ title: 'Best CRM for Small Business in Australia'
 description: 'Small businesses rarely lose customers because they do not care. They lose them because they are busy. Here is what to look for in a CRM that carries the follow-up for you.'
 category: CRM
 date: 2026-10-16
+seoDescription: 'What Australian small businesses should look for in a CRM that carries the follow-up for them, with a practical checklist and setup guide.'
 cover: ../../assets/web-services/team.jpg
 coverAlt: 'A small team talking around a wooden table with notebooks, drinks and an open laptop'
 ---

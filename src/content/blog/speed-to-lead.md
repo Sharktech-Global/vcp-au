@@ -3,6 +3,8 @@ title: 'Speed to Lead: Why the First Five Minutes Decide Who Wins the Enquiry'
 description: 'Most enquiries go to the business that answers first, not the one that is best. Here is how small teams can reply in minutes, even after hours, without hiring more staff.'
 category: Automation
 date: 2026-10-06
+seoTitle: 'Speed to Lead: Reply to Every Enquiry Fast | VCPility'
+seoDescription: 'Most enquiries go to the business that answers first. How small Australian teams can reply in minutes, even after hours, without hiring more staff.'
 cover: ../../assets/web-services/services/integrations-ai-automation.jpg
 coverAlt: 'A smiling woman holding a smartphone, reading a message'
 ---

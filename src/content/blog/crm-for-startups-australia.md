@@ -4,6 +4,8 @@ description: 'Australian founders often start with a free CRM, a spreadsheet and
 category: Start-ups
 date: 2026-11-04
 author: 'VCPility Team, Sharktech Global'
+seoTitle: 'CRM for Start-ups in Australia | VCPility'
+seoDescription: 'How Australian founders should choose a CRM that scales, the traps to avoid, and why VCPility by Sharktech Global is set up and run for you.'
 cover: ../../assets/web-services/wireframe.jpg
 coverAlt: 'Planning notes and a laptop on a desk'
 ---
