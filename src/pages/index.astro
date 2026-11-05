@@ -305,21 +305,21 @@ const bandStats = [
 const testimonials = [
 	{
 		quote:
-			"I used to spend 3 hours every night on follow-ups. Now the AI handles it while I'm with my family. Best investment I've made for my business.",
-		name: 'Michael T.',
-		role: 'Solar Installation Business',
+			'Every enquiry gets a fast reply, day or night. AI agents answer, qualify and book prospects into your calendar, with voice included from Elevate.',
+		name: 'First response, handled',
+		role: 'AI chat and voice agents',
 	},
 	{
 		quote:
-			"Our bookings increased by 40% in the first month. The chatbot answers questions and books appointments even when we're with patients.",
-		name: 'Dr. Sarah K.',
-		role: 'Dental Practice Owner',
+			'Our Australian-led team builds your pipeline, automations and follow-up for you. You can still change anything yourself.',
+		name: 'Done for you',
+		role: 'Set up by our team',
 	},
 	{
 		quote:
-			'Finally, I have a system that works. No more lost leads, no more forgotten follow-ups. My stress levels have dropped dramatically.',
-		name: 'James R.',
-		role: 'Real Estate Agent',
+			'Built and supported by Sharktech Global in Liverpool, NSW. Plans and prices are published in Australian dollars.',
+		name: 'Australian built and accountable',
+		role: 'Sharktech Global',
 	},
 ];
 
@@ -948,21 +948,21 @@ const industries = [
 	</section>
 
 	<!-- ============================================
-	     05 Testimonials: the lead quote writes itself in (Aceternity Text Generate Effect)
+	     05 Commitments: the lead statement writes itself in (Aceternity Text Generate Effect)
 	     ============================================ -->
 	<section class="chapter quotes-sec">
 		<div class="container">
-			<p class="label reveal"><span class="label__num">05</span>Real Results</p>
+			<p class="label reveal"><span class="label__num">05</span>Our Commitments</p>
 
 			<div class="chapter__head">
 				<h2 class="display reveal-lines" style="--d: 0.1s">
-					<span class="line"><span class="line__inner">Businesses Like Yours</span></span>
-					<span class="line" style="--i: 1"><span class="line__inner muted">Are Thriving</span></span>
+					<span class="line"><span class="line__inner">What You Can</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">Hold Us To</span></span>
 				</h2>
 				<div class="lead reveal" style="--d: 0.25s">
-					<p>Don't just take our word for it. Here's what our clients say.</p>
+					<p>No borrowed reviews or invented results. Just how VCPility works, so you can check it before you sign.</p>
 					<a href="/contact" class="btn btn--link">
-						Get Results Like These
+						Book a Demo
 						<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
 					</a>
 				</div>
@@ -973,13 +973,6 @@ const industries = [
 					testimonials.map(({ quote, name, role }, i) => (
 						<li class:list={['reveal', i === 0 && 'quotes__lead']} style={`--d: ${i * 0.1}s`}>
 							<figure class="quote">
-								<span class="quote__stars" role="img" aria-label="Rated 5 out of 5">
-									{Array.from({ length: 5 }, () => (
-										<svg viewBox="0 0 20 20" aria-hidden="true">
-											<path d={starPath} />
-										</svg>
-									))}
-								</span>
 								<blockquote>
 									<p>
 										{i === 0
