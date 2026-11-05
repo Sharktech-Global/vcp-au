@@ -12,6 +12,9 @@ const blog = defineCollection({
 			title: z.string(),
 			/** One or two sentences, used for the listing, the post lead and the meta description */
 			description: z.string(),
+			/** Optional search result title and description; fall back to the title and description */
+			seoTitle: z.string().optional(),
+			seoDescription: z.string().optional(),
 			category: z.string(),
 			date: z.coerce.date(),
 			author: z.string().default('VCPility Team'),
