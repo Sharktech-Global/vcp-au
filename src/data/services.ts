@@ -47,7 +47,7 @@ export const services: Service[] = [
 		headline: ['Websites that win', 'the enquiry.'],
 		lead: 'A custom website designed around how your customers decide, built to load fast, rank well and turn visitors into enquiries. Easy for your team to update once we hand it over.',
 		seoTitle: 'Custom Website Design and Development Sydney | VCPility',
-		seoDescription: 'Custom business and corporate websites designed and built by an Australian-led team in Sydney and Melbourne. Fast, mobile-first and wired into your CRM to turn visitors into enquiries.',
+		seoDescription: 'Custom business websites designed and built by an Australian-led team in Sydney and Melbourne. Fast, mobile-first and wired into your CRM.',
 		keywords: 'custom website design Sydney, corporate website developer, website development Australia, business website builder, web designer Melbourne',
 		facts: [
 			{ label: 'Best for', value: 'Businesses that need more enquiries' },
@@ -118,7 +118,7 @@ export const services: Service[] = [
 		headline: ['Software built around', 'how you work.'],
 		lead: 'Client portals, dashboards and internal tools that replace spreadsheets and manual work. Engineered by the same team that builds and runs the Sharktech platforms.',
 		seoTitle: 'Custom Web Application Development Australia | VCPility',
-		seoDescription: 'Client portals, dashboards and internal tools built by an Australian-led development team. Replace spreadsheets and manual work with secure custom web applications.',
+		seoDescription: 'Client portals, dashboards and internal tools built by an Australian-led team. Replace spreadsheets and manual work with secure web applications.',
 		keywords: 'custom web application development Australia, client portal development, business dashboard development, web app developer Sydney',
 		facts: [
 			{ label: 'Best for', value: 'Teams outgrowing spreadsheets' },
@@ -189,7 +189,7 @@ export const services: Service[] = [
 		headline: ['Online stores that', 'sell more.'],
 		lead: 'Storefronts that load quickly, check out cleanly and connect to your stock, payments and shipping, so selling online takes less of your time.',
 		seoTitle: 'E-commerce Website Development Australia | VCPility',
-		seoDescription: 'Online stores built by an Australian-led team: fast product pages, clean checkout and stock, payment and shipping integrations, so selling online takes less of your time.',
+		seoDescription: 'Online stores built by an Australian-led team, with fast product pages, clean checkout and stock, payment and shipping integrations.',
 		keywords: 'e-commerce website development Australia, online store developer Sydney, Shopify developer Australia, e-commerce website design',
 		facts: [
 			{ label: 'Best for', value: 'Retailers and product brands' },
@@ -260,7 +260,7 @@ export const services: Service[] = [
 		headline: ['Every enquiry answered,', 'day or night.'],
 		lead: 'We connect your website to your CRM, bookings and inbox, then put AI agents to work answering, qualifying and following up every enquiry, around the clock.',
 		seoTitle: 'AI Agents and Business Automation Australia | VCPility',
-		seoDescription: 'Australian AI agent deployment for small and medium businesses: AI chatbots, AI voice agents, CRM integration and automated follow-up that answer every enquiry, day and night.',
+		seoDescription: 'AI agent deployment for Australian businesses: AI chatbots, AI voice agents, CRM integration and follow-up that answer every enquiry, day and night.',
 		keywords: 'AI agent deployment Australia, agentic AI for business, AI voice agent, AI chatbot for business, business automation NSW, AI automation Victoria',
 		facts: [
 			{ label: 'Best for', value: 'Teams losing leads to slow replies' },
@@ -331,7 +331,7 @@ export const services: Service[] = [
 		headline: ['Found faster.', 'Loaded faster.'],
 		lead: 'Technical SEO, speed optimisation and analytics that help the right customers find you, then make sure your site is quick enough to keep them.',
 		seoTitle: 'Technical SEO and Website Speed Optimisation | VCPility',
-		seoDescription: 'Technical SEO, answer engine optimisation, structured data and speed improvements from an Australian-led team, so the right customers find your business in Google and AI search.',
+		seoDescription: 'Technical SEO, answer engine optimisation, structured data and speed work from an Australian-led team, so customers find you in Google and AI search.',
 		keywords: 'technical SEO Australia, website speed optimisation, AEO, answer engine optimisation, local SEO Sydney, SEO services NSW',
 		facts: [
 			{ label: 'Best for', value: 'Sites that should rank higher' },

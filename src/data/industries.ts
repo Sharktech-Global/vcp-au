@@ -51,9 +51,9 @@ export const industries: Industry[] = [
 		summary: 'Win more new clients in tax time and all year. Every call and enquiry answered, booked and followed up.',
 		headline: ['More new clients.', 'Less chasing.'],
 		lead: 'VCPility answers every enquiry your accounting firm gets, books the first meeting and follows up until the client signs. Your team stays on billable work.',
-		seoTitle: 'CRM and AI Automation for Accountants in Australia | VCPility',
+		seoTitle: 'CRM and AI Automation for Accountants | VCPility',
 		seoDescription:
-			'An Australian-led CRM and AI automation system for accounting firms. Answer every enquiry, book first meetings automatically and follow up new clients without extra admin.',
+			'Australian-led CRM and AI automation for accounting firms. Answer every enquiry, book first meetings automatically and follow up new clients.',
 		keywords:
 			'CRM for accountants Australia, accounting firm CRM, client onboarding automation accounting firm, lead management for accountants, AI receptionist for accountants',
 		facts: [
@@ -110,7 +110,7 @@ export const industries: Industry[] = [
 		summary: 'Look as responsive as a big firm. Enquiries answered in minutes, new clients onboarded without the back and forth.',
 		headline: ['Answer every enquiry.', 'Even mid-reconciliation.'],
 		lead: 'VCPility gives bookkeepers a CRM, an AI agent and automated follow-up, so new clients are captured and booked while you keep working.',
-		seoTitle: 'CRM and Client Automation for Bookkeepers in Australia | VCPility',
+		seoTitle: 'CRM for Bookkeepers in Australia | VCPility',
 		seoDescription:
 			'An Australian-led CRM for bookkeepers. Capture every enquiry, reply in minutes with AI, book discovery calls and automate new client follow-up.',
 		keywords: 'CRM for bookkeepers Australia, bookkeeping CRM, bookkeeper lead follow-up, client onboarding for bookkeepers, AI chatbot for bookkeepers',
@@ -164,9 +164,9 @@ export const industries: Industry[] = [
 		summary: 'Turn more enquiries into first appointments. Fast replies, automated follow-up and a clear new client pipeline.',
 		headline: ['More first meetings.', 'Fewer lost enquiries.'],
 		lead: 'VCPility captures every enquiry your advice practice receives, replies in minutes and books the first appointment, alongside the advice software you already use.',
-		seoTitle: 'Lead Management and AI Automation for Financial Planners | VCPility',
+		seoTitle: 'Lead Management for Financial Planners | VCPility',
 		seoDescription:
-			'Australian-led lead management for financial planners and advisers. Reply to every enquiry in minutes, book first appointments automatically and nurture prospects until they are ready.',
+			'Australian-led lead management for financial planners. Reply to every enquiry in minutes, book first appointments and nurture prospects.',
 		keywords:
 			'CRM for financial planners Australia, lead follow-up for financial advisers, financial adviser marketing automation, client acquisition for financial planners',
 		facts: [
@@ -219,9 +219,9 @@ export const industries: Industry[] = [
 		summary: 'Reply to every borrower first. AI answers enquiries in minutes and books the discovery call.',
 		headline: ['Be the first broker', 'they hear from.'],
 		lead: 'Borrowers contact several brokers at once. VCPility replies in minutes, day or night, books the discovery call and keeps every lead in your pipeline.',
-		seoTitle: 'Lead Capture and AI Follow-Up for Mortgage Brokers | VCPility',
+		seoTitle: 'CRM and AI Follow-Up for Mortgage Brokers | VCPility',
 		seoDescription:
-			'Australian-led lead capture for mortgage brokers. AI replies to borrower enquiries in minutes, books discovery calls and follows up automatically, alongside your broker CRM.',
+			'Australian-led lead capture for mortgage brokers. AI replies to borrower enquiries in minutes, books discovery calls and follows up automatically.',
 		keywords:
 			'CRM for mortgage brokers Australia, mortgage broker lead follow-up, mortgage broker marketing automation, AI assistant for mortgage brokers',
 		facts: [
@@ -274,9 +274,9 @@ export const industries: Industry[] = [
 		summary: 'Run like a bigger company from day one. Sales, follow-up and support automated, without a big team.',
 		headline: ['Scale the business.', 'Not the headcount.'],
 		lead: 'VCPility gives founders a done-for-you CRM, AI agents and automation, so every lead is captured and followed up while you build the business.',
-		seoTitle: 'CRM, AI Agents and Automation for Start-ups in Australia | VCPility',
+		seoTitle: 'CRM and AI Automation for Start-ups | VCPility',
 		seoDescription:
-			'An Australian-led, done-for-you CRM and AI automation system for start-ups and entrepreneurs. Capture every lead, follow up automatically and grow without a large team.',
+			'Done-for-you CRM and AI automation for Australian start-ups and founders. Capture every lead, follow up automatically and grow without a big team.',
 		keywords:
 			'CRM for startups Australia, AI automation for entrepreneurs, startup marketing automation Australia, AI agents for small business, done for you CRM',
 		facts: [
@@ -329,9 +329,9 @@ export const industries: Industry[] = [
 		summary: 'An Australian-led AI receptionist that answers every call, books appointments and never takes leave in tax time.',
 		headline: ['Every call answered.', 'Every season.'],
 		lead: 'The VCPility AI receptionist answers your firm’s calls day and night, handles common questions, books appointments and hands complex calls to your team.',
-		seoTitle: 'AI Receptionist for Accountants and Accounting Firms in Australia | VCPility',
+		seoTitle: 'AI Receptionist for Accounting Firms | VCPility',
 		seoDescription:
-			'An Australian-led AI receptionist for accounting firms. Answers every call, books appointments into your calendar and sends your team a summary, from tax time to year end.',
+			'An Australian-led AI receptionist for accounting firms. Answers every call, books appointments and sends your team a summary, all year round.',
 		keywords:
 			'AI receptionist for accountants, AI receptionist accounting firm Australia, virtual receptionist for accountants, AI phone answering for accountants, AI voice agent accounting',
 		facts: [
