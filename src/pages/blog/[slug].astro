@@ -32,7 +32,7 @@ const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
 // Structured data: the article itself and where it sits in the site
 const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
 const pageUrl = new URL(Astro.url.pathname, site).href;
-const schema = [
+const schema: Record<string, unknown>[] = [
 	{
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
@@ -56,6 +56,39 @@ const schema = [
 		],
 	},
 ];
+
+// FAQPage: the questions and answers under the "Frequently asked questions" heading,
+// so search and answer engines can read them as structured data
+const plain = (s: string) =>
+	s
+		.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+		.replace(/\*\*|__|`/g, '')
+		.replace(/\s+/g, ' ')
+		.trim();
+const faqBlock =
+	(post.body ?? '')
+		.split(/^##\s+Frequently asked questions\s*$/im)[1]
+		?.split(/^##\s/m)[0]
+		.split(/^\*\*Sources/m)[0] ?? '';
+const faqs = faqBlock
+	.split(/^###\s+/m)
+	.slice(1)
+	.map((chunk) => {
+		const [question, ...answer] = chunk.split('\n');
+		return { question: plain(question), answer: plain(answer.join(' ')) };
+	})
+	.filter(({ question, answer }) => question && answer);
+if (faqs.length > 0) {
+	schema.push({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map(({ question, answer }) => ({
+			'@type': 'Question',
+			name: question,
+			acceptedAnswer: { '@type': 'Answer', text: answer },
+		})),
+	});
+}
 
 // The facts under the title, each with one of the logo colours as a small dot
 const facts = [
