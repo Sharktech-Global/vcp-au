@@ -60,13 +60,13 @@ const contacts = [
 	},
 	{
 		label: 'Phone',
-		value: '+61 468 487 373',
-		href: 'tel:+61468487373',
+		value: '+61 468 017 373',
+		href: 'tel:+61468017373',
 		icon: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
 	},
 	{
-		label: 'Support',
-		value: '24/7 Available',
+		label: 'Hours',
+		value: '9am to 9pm',
 		icon: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
 	},
 ];
@@ -84,8 +84,7 @@ const year = new Date().getFullYear();
 					<Image src={logo} alt="VCPility" height={80} />
 				</a>
 				<p class="footer__desc">
-					AI-powered automation for Australian businesses. We help you stop drowning in admin and
-					start growing your business.
+					VCPility is the web services division of <a href="https://www.sharktech.com.au/" class="footer__link">Sharktech Global</a>: websites, CRM, AI agents and digital marketing for Australian businesses. We help you stop drowning in admin and start growing your business.
 				</p>
 				<ul class="footer__social">
 					{
@@ -148,7 +147,7 @@ const year = new Date().getFullYear();
 				<span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
 				<span>© {year} <span class="footer__name">Sharktech VCPility</span>. All rights reserved.</span>
 			</p>
-			<ul class="footer__locations" aria-label="Locations">
+			<ul class="footer__locations" aria-label="Areas we support">
 				{
 					locations.map((city) => (
 						<li class="footer__location">
