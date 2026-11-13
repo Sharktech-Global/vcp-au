@@ -17,7 +17,7 @@ interface Props {
 }
 
 const { service, index } = Astro.props;
-const { title, headline, lead, facts, overview, image, included, steps, stack, faqs, seoTitle, seoDescription, keywords } = service;
+const { title, headline, lead, facts, overview, image, included, steps, stack, faqs, seoTitle, seoDescription, keywords, partner } = service;
 const others = services
 	.map((s, i) => ({ ...s, num: i + 1 }))
 	.filter((s) => s.slug !== service.slug);
@@ -110,7 +110,11 @@ const schema = [
 							Start a project
 							<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
 						</a>
-						<a href="#included" class="btn btn--link">What's included</a>
+						{partner ? (
+							<a href={partner.href} class="btn btn--link" rel="noopener">{partner.label}</a>
+						) : (
+							<a href="#included" class="btn btn--link">What's included</a>
+						)}
 					</div>
 				</div>
 			</div>
