@@ -8,6 +8,7 @@ import hostingPhoto from '../assets/web-services/services/hosting-care-support.j
 import teamPhoto from '../assets/web-services/team.jpg';
 import codePhoto from '../assets/web-services/code.jpg';
 import officePhoto from '../assets/home/industries/accounting.jpg';
+import wireframePhoto from '../assets/web-services/wireframe.jpg';
 
 /* Web Services content: one entry per service.
    The /web-services list uses title, summary and tags; each service's own page
@@ -700,6 +701,457 @@ export const services: Service[] = [
 			{
 				q: 'Who is this for?',
 				a: 'Accountants, bookkeepers, financial planners, mortgage brokers and other professional services firms that want one partner for growth and IT.',
+			},
+		],
+	},
+	{
+		slug: 'ai-receptionist',
+		title: 'AI Receptionist & Voice Agent',
+		summary:
+			'An AI voice agent that answers every call for your firm, day or night, qualifies the enquiry and books a meeting with your team.',
+		tags: ['AI voice agent', 'Call answering', 'Booking'],
+		headline: ['Every call answered,', 'every time.'],
+		lead: 'Our AI receptionist answers your phone in a natural voice, handles common questions, takes details and books a meeting with your team. Set up and managed for you by VCPility, the web services division of Sharktech Global.',
+		seoTitle: 'AI Receptionist for Professional Services Firms | VCPility',
+		seoDescription: 'An AI receptionist for Australian accountants, planners, brokers and start-ups: answers every call, qualifies the enquiry and books a meeting, 24/7.',
+		keywords: 'AI receptionist Australia, AI phone answering service, AI voice agent for professional services, virtual receptionist AI, AI receptionist for financial planners',
+		facts: [
+			{ label: 'Best for', value: 'Firms that miss calls during client work' },
+			{ label: 'You get', value: 'AI voice agent set up and managed' },
+			{ label: 'Included from', value: 'Elevate plan' },
+		],
+		overview:
+			'A missed call from a new prospect is often a lost client, because the next firm they call picks up. An AI receptionist means every call is answered in seconds, and your team only takes the conversations that need them.',
+		image: { src: automationPhoto, alt: 'Woman smiling as she reads a message on her phone', label: 'Calls', caption: 'Answered in seconds, any hour', position: '50% 28%' },
+		included: [
+			{
+				title: 'Natural voice answering',
+				desc: 'The agent answers in a clear, natural voice using your firm name and approved scripts.',
+			},
+			{
+				title: 'Enquiry qualification',
+				desc: 'It asks the questions your team would ask and records the answers in your CRM.',
+			},
+			{
+				title: 'Meeting booking',
+				desc: 'Callers book a discovery call or appointment straight into your calendar.',
+			},
+			{
+				title: 'After-hours cover',
+				desc: 'Calls at night, on weekends and in peak season are answered, not sent to voicemail.',
+			},
+			{
+				title: 'Warm handover',
+				desc: 'Urgent or complex calls are passed to a person, with a summary sent to your team.',
+			},
+			{
+				title: 'Call summaries',
+				desc: 'Every call is logged with a transcript and summary, so nothing is lost.',
+			},
+		],
+		steps: [
+			{ title: 'Map your calls', desc: 'We list the calls you get, the questions callers ask and what should happen next.' },
+			{ title: 'Write the scripts', desc: 'We agree what the agent can say, what it must not say and when it hands over.' },
+			{ title: 'Connect and test', desc: 'We connect your number, CRM and calendar, then test real call scenarios.' },
+			{ title: 'Go live and refine', desc: 'We review calls each week at first, then monthly, and keep improving the answers.' },
+		],
+		stack: ['AI voice agent', 'VCPility CRM', 'Online booking', 'Call transcripts', 'SMS follow-up'],
+		faqs: [
+			{
+				q: 'What does an AI receptionist do?',
+				a: 'It answers your business calls, responds to common questions, collects caller details and books meetings, then hands anything urgent or complex to a person.',
+			},
+			{
+				q: 'How much does the AI receptionist cost?',
+				a: 'The AI voice agent is included from the Elevate plan, at $300 + GST a month billed annually, or $360 month to month. Call usage is set out on the plans page.',
+			},
+			{
+				q: 'Will callers know it is AI?',
+				a: 'The agent is open about being an AI assistant for your firm, and any caller can ask for a person.',
+			},
+			{
+				q: 'Can it give financial, credit or tax advice?',
+				a: 'No. It answers general questions about your firm and books a call with your licensed or registered team.',
+			},
+			{
+				q: 'Does it work with my existing phone number?',
+				a: 'Yes. Calls can be forwarded to the agent at all times, after hours only, or when your team is busy.',
+			},
+		],
+	},
+	{
+		slug: 'answer-engine-optimisation',
+		title: 'Answer Engine Optimisation (AEO)',
+		summary:
+			'Get your firm named in answers from ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews, with clear pages, structured data and consistent facts.',
+		tags: ['AEO', 'Structured data', 'AI search'],
+		headline: ['Be the answer', 'AI gives.'],
+		lead: 'Buyers now ask AI assistants which firm to call. Answer engine optimisation makes your services, prices and expertise clear enough for those assistants to understand, quote and recommend.',
+		seoTitle: 'Answer Engine Optimisation Services Australia | VCPility',
+		seoDescription: 'Answer engine optimisation for Australian professional services: help ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews understand your firm.',
+		keywords: 'answer engine optimisation Australia, AEO services, generative engine optimisation, how to show up in ChatGPT, AI search optimisation for accountants',
+		facts: [
+			{ label: 'Best for', value: 'Firms that want to be found in AI answers' },
+			{ label: 'You get', value: 'Pages, schema, entity data & reports' },
+			{ label: 'Included in', value: 'Dominate plan, or as an add-on' },
+		],
+		overview:
+			'AI assistants answer from pages they can read and trust. If your services, prices and location are vague, scattered or trapped in images, the assistant names someone else. AEO fixes the source material.',
+		image: { src: seoPhoto, alt: 'Laptop showing analytics charts on a desk', label: 'Search', caption: 'Clear facts that AI can quote', position: '50% 50%' },
+		included: [
+			{
+				title: 'Answer-first pages',
+				desc: 'Each service page opens with a direct answer to the question buyers ask, then the detail.',
+			},
+			{
+				title: 'FAQ content and schema',
+				desc: 'Real buyer questions answered on the page and marked up with FAQPage structured data.',
+			},
+			{
+				title: 'Entity consistency',
+				desc: 'Your firm name, services, location and contact details stated the same way across your site and listings.',
+			},
+			{
+				title: 'Comparison content',
+				desc: 'Clear tables that explain options and prices, which AI assistants quote heavily.',
+			},
+			{
+				title: 'Listings and citations',
+				desc: 'Profiles on the directories and lists that AI assistants read when they answer.',
+			},
+			{
+				title: 'Monthly AI answer check',
+				desc: 'We ask the same buyer questions on major AI assistants each month and report who they name.',
+			},
+		],
+		steps: [
+			{ title: 'Baseline', desc: 'We ask buyer questions on ChatGPT, Gemini, Claude and Perplexity and record who is named today.' },
+			{ title: 'Fix the source', desc: 'We rewrite key pages answer-first and add structured data and FAQs.' },
+			{ title: 'Build citations', desc: 'We complete listings and profiles that AI assistants read.' },
+			{ title: 'Measure monthly', desc: 'We repeat the same questions and report movement.' },
+		],
+		stack: ['Schema.org', 'FAQPage', 'llms.txt', 'Google Search Console', 'IndexNow', 'Bing Webmaster Tools'],
+		faqs: [
+			{
+				q: 'What is answer engine optimisation?',
+				a: 'AEO is the work of making your website and listings clear enough that AI assistants such as ChatGPT, Gemini, Claude and Perplexity can understand your firm and include it in their answers.',
+			},
+			{
+				q: 'Can you guarantee ChatGPT will recommend my firm?',
+				a: 'No one can guarantee that. We improve what AI assistants read about you and measure the answers each month, so you can see progress.',
+			},
+			{
+				q: 'How much does AEO cost?',
+				a: 'Advanced SEO and AEO is included in the Dominate plan, at $490 + GST a month billed annually, or $590 month to month. Elevate clients can add AI-powered daily SEO and AEO with 20 new pages a month for $180 + GST a month.',
+			},
+			{
+				q: 'Is AEO different from SEO?',
+				a: 'They overlap. SEO helps you rank in Google results. AEO makes your content quotable inside AI answers. We do both together.',
+			},
+			{
+				q: 'How long does it take?',
+				a: 'New pages are usually indexed within a few weeks. AI answers change more slowly, so we track them monthly.',
+			},
+		],
+	},
+	{
+		slug: 'ads-management',
+		title: 'Google & Meta Ads Management',
+		summary:
+			'Google, Meta and LinkedIn ads managed for professional services firms, with every lead answered by AI and tracked through to a booked meeting.',
+		tags: ['Google Ads', 'Meta Ads', 'Lead tracking'],
+		headline: ['Ads that turn into', 'booked meetings.'],
+		lead: 'We manage your Google, Meta and LinkedIn campaigns and connect every lead to your CRM and AI agents, so you see which ads produce meetings, not just clicks.',
+		seoTitle: 'Google and Meta Ads for Professional Firms | VCPility',
+		seoDescription: 'Google, Meta and LinkedIn ads management for Australian professional services firms, with every lead answered fast and tracked to a booked meeting.',
+		keywords: 'Google Ads management for accountants, Meta ads for financial planners, PPC management Australia, LinkedIn ads for professional services, ads management for mortgage brokers',
+		facts: [
+			{ label: 'Best for', value: 'Firms ready to buy demand' },
+			{ label: 'You get', value: 'Campaigns, landing pages & lead tracking' },
+			{ label: 'Add-on from', value: '$300 + GST a month' },
+		],
+		overview:
+			'Most ad budgets are wasted after the click: slow replies, no follow-up and no tracking. We manage the campaigns and the response together, so paid leads are answered in minutes and measured to the meeting.',
+		image: { src: wireframePhoto, alt: 'Pen resting on hand-drawn page sketches on a desk', label: 'Campaigns', caption: 'From click to booked meeting', position: '50% 45%' },
+		included: [
+			{
+				title: 'Campaign set-up',
+				desc: 'Search, social and LinkedIn campaigns built around the clients you want.',
+			},
+			{
+				title: 'Landing pages',
+				desc: 'Dedicated pages for each campaign, built to convert.',
+			},
+			{
+				title: 'Instant lead response',
+				desc: 'AI agents reply to every ad lead in minutes and book a meeting.',
+			},
+			{
+				title: 'CRM tracking',
+				desc: 'Each lead tagged by campaign, so you see cost per meeting, not just cost per click.',
+			},
+			{
+				title: 'Monthly optimisation',
+				desc: 'Budgets, keywords, audiences and ads adjusted every month from the results.',
+			},
+			{
+				title: 'Plain reporting',
+				desc: 'A monthly report of spend, leads, meetings and new clients.',
+			},
+		],
+		steps: [
+			{ title: 'Plan', desc: 'We agree the target client, offer, budget and the result you need.' },
+			{ title: 'Build', desc: 'We set up campaigns, tracking and landing pages, connected to your CRM.' },
+			{ title: 'Launch', desc: 'Campaigns go live with AI follow-up on every lead.' },
+			{ title: 'Optimise', desc: 'We review results monthly and move budget to what books meetings.' },
+		],
+		stack: ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'VCPility CRM', 'Google Analytics', 'Landing pages'],
+		faqs: [
+			{
+				q: 'How much does ads management cost?',
+				a: 'Ads management is $300 + GST a month billed annually, or $350 + GST month to month, as an add-on to a VCPility plan. Your ad spend is paid to the platforms separately.',
+			},
+			{
+				q: 'Which platforms do you manage?',
+				a: 'Google, Meta (Facebook and Instagram) and LinkedIn.',
+			},
+			{
+				q: 'Do I need a VCPility plan?',
+				a: 'Yes. Ads management is an add-on, so every lead flows into your CRM and is answered by your AI agents.',
+			},
+			{
+				q: 'How do you measure success?',
+				a: 'By booked meetings and new clients from each campaign, tracked in your CRM, not by clicks alone.',
+			},
+			{
+				q: 'Can you advertise financial products?',
+				a: 'We advertise your firm and services. Ad copy for regulated services is approved by you before it runs.',
+			},
+		],
+	},
+	{
+		slug: 'reputation-management',
+		title: 'Google Reviews & Reputation',
+		summary:
+			'Automatic Google review requests, review monitoring and Google Business Profile management, so prospects choose your firm when they compare.',
+		tags: ['Google reviews', 'Business Profile', 'Monitoring'],
+		headline: ['More reviews.', 'More trust.'],
+		lead: 'We ask happy clients for a Google review at the right moment, monitor what people say about you and keep your Google Business Profile current, so you stand out when prospects compare firms.',
+		seoTitle: 'Google Reviews and Reputation Management | VCPility',
+		seoDescription: 'Google review requests, review monitoring and Business Profile management for Australian accountants, planners, brokers and professional services firms.',
+		keywords: 'Google review management Australia, reputation management for accountants, get more Google reviews, Google Business Profile management, online reviews for financial planners',
+		facts: [
+			{ label: 'Best for', value: 'Firms with happy clients but few reviews' },
+			{ label: 'You get', value: 'Review requests, monitoring & profile care' },
+			{ label: 'Included from', value: 'Launch plan' },
+		],
+		overview:
+			'Prospects read reviews before they call. Most happy clients would leave one if asked at the right time in the right way. We make the ask automatic and keep your profile accurate.',
+		image: { src: teamPhoto, alt: 'Four people working together at a wooden table with notebooks, drinks and a laptop', label: 'Reputation', caption: 'Happy clients, asked at the right time', position: '50% 50%' },
+		included: [
+			{
+				title: 'Automatic review requests',
+				desc: 'A short email or SMS asks each client for a review after the engagement.',
+			},
+			{
+				title: 'Review monitoring',
+				desc: 'New reviews flagged to your team, so you can reply quickly.',
+			},
+			{
+				title: 'Reply support',
+				desc: 'Suggested replies for positive and negative reviews, approved by you.',
+			},
+			{
+				title: 'Business Profile management',
+				desc: 'Hours, services, photos and posts kept current on your Google Business Profile.',
+			},
+			{
+				title: 'Review widgets',
+				desc: 'Your real Google reviews shown on your website as text that search engines can read.',
+			},
+			{
+				title: 'Reporting',
+				desc: 'Monthly review count and rating trend.',
+			},
+		],
+		steps: [
+			{ title: 'Connect', desc: 'We connect your Google Business Profile and CRM.' },
+			{ title: 'Set the timing', desc: 'We agree when each client is asked, based on your workflow.' },
+			{ title: 'Launch', desc: 'Requests go out automatically and new reviews are monitored.' },
+			{ title: 'Report', desc: 'You see review growth and replies each month.' },
+		],
+		stack: ['Google Business Profile', 'VCPility CRM', 'Email & SMS', 'Review widgets'],
+		faqs: [
+			{
+				q: 'How do I get more Google reviews?',
+				a: 'Ask every happy client at the right moment with a simple link. We automate the request by email or SMS after each engagement.',
+			},
+			{
+				q: 'Is reputation management included in a plan?',
+				a: 'Automatic Google review monitoring is included from Launch, at $70 + GST a month billed annually, or $85 month to month. Reputation management and Google Business Profile management are included from Elevate.',
+			},
+			{
+				q: 'Can you remove bad reviews?',
+				a: 'We cannot remove genuine reviews. We help you reply professionally and flag reviews that breach Google policies.',
+			},
+			{
+				q: 'Do you write reviews?',
+				a: 'No. Every review comes from a real client. Fake or incentivised reviews breach Google policy and Australian Consumer Law.',
+			},
+			{
+				q: 'Which review sites do you cover?',
+				a: 'Google first, because it drives local search. Facebook reviews can be monitored too.',
+			},
+		],
+	},
+	{
+		slug: 'crm-setup',
+		title: 'Done-for-You CRM Set-up',
+		summary:
+			'Your CRM, pipeline, booking calendar and follow-up set up for you, with contacts migrated and your team trained, so you start winning clients from day one.',
+		tags: ['CRM set-up', 'Migration', 'Training'],
+		headline: ['Your CRM,', 'set up for you.'],
+		lead: 'We set up your VCPility CRM around how your firm works: pipeline stages, booking calendar, forms, follow-up and reporting, with your contacts imported and your team trained.',
+		seoTitle: 'Done-for-You CRM Set-up for Professional Firms | VCPility',
+		seoDescription: 'Done-for-you CRM set-up for Australian accountants, bookkeepers, planners, brokers and start-ups: pipeline, booking, follow-up and team training.',
+		keywords: 'CRM setup service Australia, done for you CRM, CRM implementation for accountants, CRM migration Australia, CRM for small business setup',
+		facts: [
+			{ label: 'Best for', value: 'Firms tracking clients in spreadsheets' },
+			{ label: 'You get', value: 'Pipeline, booking, follow-up & training' },
+			{ label: 'Plans from', value: '$50 + GST a month' },
+		],
+		overview:
+			'A CRM only works when it matches how your firm wins clients and your team actually uses it. We build it for you, so it is useful from the first enquiry.',
+		image: { src: webAppsPhoto, alt: 'Developer typing code on a laptop', label: 'CRM', caption: 'Built around how you win clients', position: '50% 50%' },
+		included: [
+			{
+				title: 'Pipeline design',
+				desc: 'Stages from first enquiry to signed engagement, matched to your process.',
+			},
+			{
+				title: 'Contact import',
+				desc: 'Your existing clients and prospects imported and tagged.',
+			},
+			{
+				title: 'Booking calendar',
+				desc: 'Online booking connected to your team calendars, with reminders.',
+			},
+			{
+				title: 'Forms and chat',
+				desc: 'Website forms and chat widget feeding straight into the CRM.',
+			},
+			{
+				title: 'Follow-up sequences',
+				desc: 'Email and SMS that chase proposals and missing information.',
+			},
+			{
+				title: 'Team training',
+				desc: 'A walkthrough so every team member knows what to do each day.',
+			},
+		],
+		steps: [
+			{ title: 'Discover', desc: 'We map how enquiries arrive and how a prospect becomes a client.' },
+			{ title: 'Build', desc: 'We set up the pipeline, calendar, forms and follow-up.' },
+			{ title: 'Import', desc: 'We bring in your contacts and test every path.' },
+			{ title: 'Train', desc: 'We train your team and stay on hand as you start.' },
+		],
+		stack: ['VCPility CRM', 'Online booking', 'Chat widget', 'Email & SMS', 'Mobile app'],
+		faqs: [
+			{
+				q: 'How long does CRM set-up take?',
+				a: 'The Starter front desk package goes live in about 60 minutes. Fuller set-ups with pipelines, follow-up and imports are scheduled during onboarding.',
+			},
+			{
+				q: 'How much does it cost?',
+				a: 'Starter is $50 + GST a month. Launch is $70 + GST a month billed annually, or $85 month to month, and includes the chat widget and calendar set up for you.',
+			},
+			{
+				q: 'Can you move our data from another CRM or spreadsheet?',
+				a: 'Yes. We import contacts from spreadsheets and most CRMs during onboarding.',
+			},
+			{
+				q: 'Does it work with our practice software?',
+				a: 'We connect common tools and can build custom integrations where needed.',
+			},
+			{
+				q: 'Do we get training?',
+				a: 'Yes. Every set-up includes a walkthrough for your team.',
+			},
+		],
+	},
+	{
+		slug: 'cybersecurity-partner',
+		title: 'Cybersecurity Partner',
+		summary:
+			'Cybersecurity for professional services firms, delivered by Sharktech Global: security health checks, account protection and backups for client data.',
+		tags: ['Cybersecurity', 'Essential Eight', 'Client data'],
+		headline: ['Protect client data,', 'before it is tested.'],
+		lead: 'Professional services firms hold sensitive client information. Sharktech Global, our parent company, finds the gaps in your accounts, devices and backups and fixes them, alongside your VCPility growth systems.',
+		seoTitle: 'Cybersecurity for Professional Services Firms | VCPility',
+		seoDescription: 'Cybersecurity for Australian accountants, planners and brokers from Sharktech Global: health checks, account protection and tested backups for client data.',
+		keywords: 'cybersecurity for accountants Australia, cyber security for financial planners, Essential Eight for small business, cybersecurity health check, data security for mortgage brokers',
+		partner: { label: 'See Sharktech cybersecurity', href: 'https://www.sharktech.com.au/services/cybersecurity' },
+		facts: [
+			{ label: 'Best for', value: 'Firms holding sensitive client data' },
+			{ label: 'Delivered by', value: 'Sharktech Global' },
+			{ label: 'Health check from', value: '$2,600' },
+		],
+		overview:
+			'Most breaches in small firms start with a weak password, an unpatched device or an untested backup. A security health check finds those gaps before someone else does.',
+		image: { src: hostingPhoto, alt: 'Two people with tablets in a server room', label: 'Security', caption: 'Gaps found and fixed', position: '50% 50%' },
+		included: [
+			{
+				title: 'Security health check',
+				desc: 'A review of accounts, devices, email and backups against practical controls.',
+			},
+			{
+				title: 'Account protection',
+				desc: 'Multi-factor authentication and access set up properly for every staff member.',
+			},
+			{
+				title: 'Patching and updates',
+				desc: 'Devices and software kept current, closing known weaknesses.',
+			},
+			{
+				title: 'Tested backups',
+				desc: 'Backups that are tested, so client files can be restored.',
+			},
+			{
+				title: 'Staff awareness',
+				desc: 'Practical guidance on phishing and safe handling of client information.',
+			},
+			{
+				title: 'Growth tools secured',
+				desc: 'Your CRM, website and AI agents included in the same security review.',
+			},
+		],
+		steps: [
+			{ title: 'Discovery call', desc: 'A free call to understand your team, systems and client data.' },
+			{ title: 'Health check', desc: 'Sharktech Global reviews your environment and reports the gaps.' },
+			{ title: 'Fix', desc: 'Agreed fixes are made in priority order.' },
+			{ title: 'Maintain', desc: 'Ongoing protection through Sharktech managed IT, or reviewed periodically.' },
+		],
+		stack: ['Microsoft 365 security', 'Multi-factor authentication', 'Endpoint protection', 'Tested backups', 'Essential Eight'],
+		faqs: [
+			{
+				q: 'Does VCPility provide cybersecurity?',
+				a: 'Yes, through Sharktech Global. VCPility is the web services division of Sharktech Global, which delivers cybersecurity and managed IT.',
+			},
+			{
+				q: 'How much does a cybersecurity health check cost?',
+				a: 'Sharktech Global security health checks start from $2,600. The fixes are quoted in writing after the check.',
+			},
+			{
+				q: 'What is the Essential Eight?',
+				a: 'It is a set of eight baseline mitigation strategies published by the Australian Cyber Security Centre. Sharktech uses it as a practical reference for small firms.',
+			},
+			{
+				q: 'Do you handle our CRM and website too?',
+				a: 'Yes. Your VCPility CRM, website and AI agents are included in the same review.',
+			},
+			{
+				q: 'Who is this for?',
+				a: 'Accountants, bookkeepers, financial planners, mortgage brokers and other firms that hold sensitive client information.',
 			},
 		],
 	},
