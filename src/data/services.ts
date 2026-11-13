@@ -413,7 +413,7 @@ export const services: Service[] = [
 		facts: [
 			{ label: 'Best for', value: 'Any site that needs to stay online' },
 			{ label: 'You get', value: 'Hosting, updates & real support' },
-			{ label: 'Support hours', value: 'Mon–Fri, 9 AM – 6 PM AEST' },
+			{ label: 'Support hours', value: '9 AM to 9 PM AEST' },
 		],
 		overview:
 			'A website is never finished on launch day. We keep yours fast, secure and up to date, so you can get on with running your business.',
