@@ -1,6 +1,6 @@
 # VCPility
 
-> VCPility is an Australian-built AI automation and CRM platform for professional services firms (accountants, bookkeepers, financial planners, mortgage brokers) and start-ups, built and supported by Sharktech Global (Liverpool, NSW). It brings a CRM, AI chatbot, AI voice agent, online booking, Google review requests, email and SMS marketing, and reporting into one system, so businesses answer every enquiry in minutes.
+> VCPility is the web services division of Sharktech Global (Liverpool, NSW). It is an Australian-built AI automation and CRM platform with a done-for-you managed growth service, managed agentic AI deployment and, through Sharktech Global, managed IT, for professional services firms (accountants, bookkeepers, financial planners, mortgage brokers) and start-ups. It brings a CRM, AI chatbot, AI voice agent, online booking, Google review requests, email and SMS marketing, and reporting into one system, so businesses answer every enquiry in minutes.
 
 VCPility also provides website design and development, web applications, e-commerce, integrations and AI automation, and hosting and care plans. Pricing is published on the plans page and quoted in Australian dollars plus GST.
 
@@ -16,6 +16,9 @@ VCPility also provides website design and development, web applications, e-comme
 - [For start-ups](https://www.vcpility.com.au/industries/startups): done-for-you CRM, AI agents and automation for founders
 - [AI receptionist for accountants](https://www.vcpility.com.au/industries/ai-receptionist-for-accountants): AI phone answering and booking for accounting firms
 - [Web services](https://www.vcpility.com.au/web-services): website, web application, e-commerce and integration services
+- [Managed growth service](https://www.vcpility.com.au/web-services/managed-growth): done-for-you CRM, AI agents, website, SEO, reviews and follow-up run each month for professional services firms
+- [Managed agentic AI deployment](https://www.vcpility.com.au/web-services/agentic-ai-deployment): AI agents designed, deployed, monitored and improved for you, with limits and human handover
+- [Managed IT partner](https://www.vcpility.com.au/web-services/managed-it-partner): managed IT, Microsoft 365, security and backups delivered by Sharktech Global, alongside your growth systems
 - [About](https://www.vcpility.com.au/about-us): who VCPility is
 - [Built by Sharktech Global](https://www.vcpility.com.au/built-by-sharktech): the company behind VCPility, offices and support hours
 - [Contact](https://www.vcpility.com.au/contact): book a demo or get support
