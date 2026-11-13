@@ -5,6 +5,9 @@ import ecommercePhoto from '../assets/web-services/services/ecommerce.jpg';
 import automationPhoto from '../assets/web-services/services/integrations-ai-automation.jpg';
 import seoPhoto from '../assets/web-services/services/seo-performance.jpg';
 import hostingPhoto from '../assets/web-services/services/hosting-care-support.jpg';
+import teamPhoto from '../assets/web-services/team.jpg';
+import codePhoto from '../assets/web-services/code.jpg';
+import officePhoto from '../assets/home/industries/accounting.jpg';
 
 /* Web Services content: one entry per service.
    The /web-services list uses title, summary and tags; each service's own page
@@ -23,6 +26,8 @@ export interface Service {
 	/** Search result title and description; fall back to the page title and lead */
 	seoTitle?: string;
 	seoDescription?: string;
+	/** Optional external link shown beside the main button, e.g. a Sharktech Global service page */
+	partner?: { label: string; href: string };
 	/** Search terms this page targets */
 	keywords?: string;
 	/** Short facts under the hero */
@@ -259,9 +264,9 @@ export const services: Service[] = [
 		tags: ['CRM', 'AI chatbots', 'Workflows'],
 		headline: ['Every enquiry answered,', 'day or night.'],
 		lead: 'We connect your website to your CRM, bookings and inbox, then put AI agents to work answering, qualifying and following up every enquiry, around the clock.',
-		seoTitle: 'AI Agents and Business Automation Australia | VCPility',
-		seoDescription: 'AI agent deployment for Australian businesses: AI chatbots, AI voice agents, CRM integration and follow-up that answer every enquiry, day and night.',
-		keywords: 'AI agent deployment Australia, agentic AI for business, AI voice agent, AI chatbot for business, business automation NSW, AI automation Victoria',
+		seoTitle: 'CRM Integration and AI Automation Australia | VCPility',
+		seoDescription: 'CRM integration and AI automation for Australian businesses: website, bookings and inbox connected, with AI chat and follow-up on every enquiry.',
+		keywords: 'CRM integration Australia, business automation, AI voice agent, AI chatbot for business, business automation NSW, AI automation Victoria',
 		facts: [
 			{ label: 'Best for', value: 'Teams losing leads to slow replies' },
 			{ label: 'You get', value: 'Connected tools & AI agents' },
@@ -461,6 +466,240 @@ export const services: Service[] = [
 			{
 				q: 'How do I request changes?',
 				a: 'Email or call our team during business hours. Small changes are handled as part of your care plan.',
+			},
+		],
+	},
+	{
+		slug: 'managed-growth',
+		title: 'Managed Growth Service',
+		summary:
+			'A done-for-you growth team for professional services firms: CRM, AI agents, website, SEO, reviews and follow-up, set up and run for you each month.',
+		tags: ['Done for you', 'CRM & AI agents', 'Monthly reporting'],
+		headline: ['Your growth team,', 'managed for you.'],
+		lead: 'VCPility is the web services division of Sharktech Global. Our managed growth service sets up and runs your CRM, AI agents, website, search presence, reviews and follow-up, so your firm wins more clients without hiring a marketing team.',
+		seoTitle: 'Managed Growth Service for Professional Firms | VCPility',
+		seoDescription: 'A done-for-you managed growth service for Australian accountants, planners, brokers and start-ups: CRM, AI agents, SEO and follow-up run for you.',
+		keywords: 'managed growth service Australia, done for you marketing for accountants, managed marketing for professional services, growth partner for financial planners, done for you CRM Australia',
+		facts: [
+			{ label: 'Best for', value: 'Firms with no marketing team' },
+			{ label: 'You get', value: 'Set-up, running & monthly reports' },
+			{ label: 'Plans from', value: '$50 + GST a month' },
+		],
+		overview:
+			'Most professional services firms do not need more software. They need someone to run it. A managed growth service means one Australian-led team sets up your systems, answers every enquiry, follows up every prospect and reports what turned into clients.',
+		image: { src: teamPhoto, alt: 'Four people working together at a wooden table with notebooks, drinks and a laptop', label: 'Growth', caption: 'One team running your growth system', position: '50% 50%' },
+		included: [
+			{
+				title: 'CRM set up and run for you',
+				desc: 'Every call, form, chat and referral lands in one pipeline, from first enquiry to signed engagement, kept tidy by our team.',
+			},
+			{
+				title: 'AI agents on every channel',
+				desc: 'An AI chatbot and, from the Elevate plan, an AI voice agent that answer in minutes, qualify the enquiry and book a first meeting with your team.',
+			},
+			{
+				title: 'Website and landing pages',
+				desc: 'A website built to convert, plus new landing pages on the higher plans, so every campaign has somewhere clear to send people.',
+			},
+			{
+				title: 'SEO and AEO',
+				desc: 'Search work that helps your firm show up in Google and in answers from AI assistants, with a monthly SEO and AEO report on the Dominate plan.',
+			},
+			{
+				title: 'Reviews and reputation',
+				desc: 'Automatic Google review requests after each engagement and monitoring of what clients say about you.',
+			},
+			{
+				title: 'Follow-up and referral campaigns',
+				desc: 'Email and SMS sequences that chase proposals, nurture slow decisions and keep referral partners engaged.',
+			},
+		],
+		steps: [
+			{ title: 'Strategy call', desc: 'We map where your enquiries come from, where they are lost and which clients you want more of.' },
+			{ title: 'Set up', desc: 'We build your CRM pipeline, AI agents, booking, review requests and follow-up around how your firm works.' },
+			{ title: 'Run', desc: 'Our team runs the system each month: campaigns, pages, reviews and fixes, with no extra hires on your side.' },
+			{ title: 'Report & improve', desc: 'Each month you see enquiries, bookings and new clients, and we tune what converts.' },
+		],
+		stack: ['VCPility CRM', 'AI chatbot', 'AI voice agent', 'Google Business Profile', 'Email & SMS', 'Google Analytics'],
+		faqs: [
+			{
+				q: 'What is a managed growth service?',
+				a: 'It is a done-for-you service where one team sets up and runs the systems that win clients: CRM, AI agents, website, search, reviews and follow-up. You approve the strategy and take the meetings. We do the rest and report results each month.',
+			},
+			{
+				q: 'How much does managed growth cost?',
+				a: 'Plans start at $50 + GST a month for Starter. Launch is $70 + GST a month billed annually, or $85 month to month. Elevate is $300 + GST a month billed annually, or $360 month to month. Dominate is $490 + GST a month billed annually, or $590 month to month. Ads management is an optional add-on.',
+			},
+			{
+				q: 'How is this different from a marketing agency?',
+				a: 'An agency usually runs campaigns and hands leads to you. A managed growth service also runs what happens after the click: the reply, the booking, the follow-up and the review request, in one system you can see.',
+			},
+			{
+				q: 'Who is it for?',
+				a: 'Accountants, bookkeepers, financial planners, mortgage brokers, other finance firms, entrepreneurs and start-ups that want more clients but have no in-house marketing team.',
+			},
+			{
+				q: 'Does the AI give financial, credit or tax advice?',
+				a: 'No. The AI answers general questions about your firm, collects details and books a call with your licensed or registered team.',
+			},
+			{
+				q: 'Who is behind VCPility?',
+				a: 'VCPility is the web services division of Sharktech Global, an Australian-led technology company based in Liverpool, New South Wales.',
+			},
+		],
+	},
+	{
+		slug: 'agentic-ai-deployment',
+		title: 'Managed Agentic AI Deployment',
+		summary:
+			'AI agents that take real actions in your business, deployed, monitored and improved for you by an Australian-led team, with clear limits and human handover.',
+		tags: ['AI agents', 'Managed for you', 'Governance'],
+		headline: ['AI agents that do the work,', 'managed for you.'],
+		lead: 'We design, deploy and manage AI agents that answer, qualify, book, follow up and update your systems. Built and supported by Sharktech Global, with clear limits, logs and a person to hand over to.',
+		seoTitle: 'Managed AI Agent Deployment for Australian Firms | VCPility',
+		seoDescription: 'Managed agentic AI deployment for Australian professional services: AI agents that answer, book and follow up, set up and monitored for you.',
+		keywords: 'managed AI agents Australia, agentic AI deployment, AI agent deployment for small business, AI agents for accounting firms, done for you AI agents Australia',
+		facts: [
+			{ label: 'Best for', value: 'Firms buried in admin and missed enquiries' },
+			{ label: 'You get', value: 'Design, deployment & ongoing management' },
+			{ label: 'Pricing', value: 'Quoted in writing after discovery' },
+		],
+		overview:
+			'An AI chatbot answers questions. An AI agent takes the next step: it books the meeting, updates the CRM, sends the follow-up and flags what needs a person. Agents only help when someone owns them, so we deploy and manage them for you.',
+		image: { src: codePhoto, alt: 'Close-up of programming code on a dark screen', label: 'Agents', caption: 'Engineered, tested and monitored', position: '50% 50%' },
+		included: [
+			{
+				title: 'Use case discovery',
+				desc: 'We find the repetitive work worth automating first, such as enquiry handling, booking, document chasing and follow-up.',
+			},
+			{
+				title: 'AI voice and chat agents',
+				desc: 'Agents that answer calls, website chat and social messages, qualify the enquiry and book time with your team.',
+			},
+			{
+				title: 'Workflow agents',
+				desc: 'Agents that update your CRM, create tasks, send reminders and move work along between your existing tools.',
+			},
+			{
+				title: 'Guardrails and handover',
+				desc: 'Agents work only from your approved information, stay inside agreed limits and hand the conversation to a person when unsure.',
+			},
+			{
+				title: 'Monitoring and logs',
+				desc: 'Every conversation and action is logged, reviewed and used to improve the agent, so you can see what it did and why.',
+			},
+			{
+				title: 'Ongoing management',
+				desc: 'We keep agents current as your services, prices and processes change, and report results each month.',
+			},
+		],
+		steps: [
+			{ title: 'Discover', desc: 'A free discovery call to map your admin, enquiry flow and the tools you already use.' },
+			{ title: 'Design', desc: 'We agree what each agent may and may not do, the information it uses and when it hands over.' },
+			{ title: 'Deploy', desc: 'We build, connect and test each agent against real scenarios before it speaks to a client.' },
+			{ title: 'Manage', desc: 'We monitor, review and improve the agents every month, and report what they handled.' },
+		],
+		stack: ['VCPility AI agents', 'AI voice agent', 'CRM workflows', 'REST APIs', 'Webhooks', 'Microsoft 365', 'Google Workspace'],
+		faqs: [
+			{
+				q: 'What is agentic AI?',
+				a: 'Agentic AI is software that does not just reply but completes steps for you, such as booking a meeting, updating a record or sending a reminder, within limits you set.',
+			},
+			{
+				q: 'What does managed agentic AI deployment include?',
+				a: 'Discovery, design, build, testing, go-live and ongoing monitoring and improvement of your AI agents, by one Australian-led team.',
+			},
+			{
+				q: 'How much does it cost?',
+				a: 'The AI voice agent is included from the Elevate plan, at $300 + GST a month billed annually, or $360 month to month. Custom AI agents and workflows are quoted in writing after a free discovery call.',
+			},
+			{
+				q: 'Will an AI agent give advice to our clients?',
+				a: 'No. Agents do not give financial, credit or tax advice. They answer general questions, collect details and book a call with your licensed or registered team.',
+			},
+			{
+				q: 'How do you keep client information safe?',
+				a: 'Agents use only the information you approve, access is limited to what each task needs, and every action is logged. We agree data handling with you before go-live.',
+			},
+			{
+				q: 'Can clients still reach a person?',
+				a: 'Always. Any client can ask for a person at any point, and agents hand over when they are unsure.',
+			},
+		],
+	},
+	{
+		slug: 'managed-it-partner',
+		title: 'Managed IT Partner',
+		summary:
+			'Managed IT for professional services firms, delivered by Sharktech Global: helpdesk, Microsoft 365, security and backups, connected to your growth systems.',
+		tags: ['Managed IT', 'Cybersecurity', 'Microsoft 365'],
+		headline: ['IT that just works,', 'from one partner.'],
+		lead: 'VCPility runs your growth systems. Our parent company, Sharktech Global, runs your IT. One Australian-led team looks after your helpdesk, Microsoft 365, security, backups and AI agents as one environment.',
+		seoTitle: 'Managed IT Partner for Professional Services | VCPility',
+		seoDescription: 'Managed IT for Australian accountants, planners and brokers from Sharktech Global: helpdesk, Microsoft 365, security and backups with your growth tools.',
+		keywords: 'managed IT for professional services firms, IT partner for accountants, managed IT for financial planners, IT support for mortgage brokers, managed IT Sydney',
+		partner: { label: 'See Sharktech managed IT', href: 'https://www.sharktech.com.au/services/managed-it-services' },
+		facts: [
+			{ label: 'Best for', value: 'Firms of 5 to 50 staff without in-house IT' },
+			{ label: 'Delivered by', value: 'Sharktech Global' },
+			{ label: 'Managed IT from', value: '$120 per user a month' },
+		],
+		overview:
+			'When your CRM, phones, email and AI agents are run by different providers, nobody owns the problem. One technology partner means one number to call and one team accountable for the whole environment.',
+		image: { src: officePhoto, alt: 'Two colleagues talking at a desk with a laptop and printed documents', label: 'Support', caption: 'One team accountable for your technology', position: '50% 40%' },
+		included: [
+			{
+				title: 'Business-hours helpdesk',
+				desc: 'A helpdesk that logs every ticket, so issues are owned, tracked and closed.',
+			},
+			{
+				title: 'Microsoft 365 and email',
+				desc: 'Accounts, licences, email and file sharing set up properly and kept tidy as staff join and leave.',
+			},
+			{
+				title: 'Monitoring, patching and backups',
+				desc: 'Devices and systems monitored and patched, with backups that are tested, not assumed.',
+			},
+			{
+				title: 'Cybersecurity',
+				desc: 'Security basics for client data, from account protection to security health checks, delivered by Sharktech Global.',
+			},
+			{
+				title: 'Growth systems in the same environment',
+				desc: 'Your VCPility CRM, AI agents, website and phones managed alongside your IT, not in a separate silo.',
+			},
+			{
+				title: 'On-site support when needed',
+				desc: 'Sharktech Global provides on-site IT support for the times a remote fix is not enough.',
+			},
+		],
+		steps: [
+			{ title: 'Discovery call', desc: 'A free call to understand your team, devices, software and the problems you want fixed.' },
+			{ title: 'Assess', desc: 'We review accounts, security, backups and support gaps, and agree a written scope.' },
+			{ title: 'Onboard', desc: 'Sharktech Global takes over helpdesk, monitoring and backups, with a planned cut-over.' },
+			{ title: 'Manage', desc: 'Ongoing support, patching and reporting, with growth and IT reviewed together.' },
+		],
+		stack: ['Microsoft 365', 'Google Workspace', 'Endpoint monitoring', 'Tested backups', 'VCPility CRM', 'AI agents'],
+		faqs: [
+			{
+				q: 'Does VCPility provide managed IT?',
+				a: 'Yes, through Sharktech Global. VCPility is the web services division of Sharktech Global, and Sharktech Global delivers managed IT, cybersecurity and on-site support.',
+			},
+			{
+				q: 'How much does managed IT cost?',
+				a: 'Sharktech Global managed IT starts from $120 per user a month. Your exact price is confirmed in writing after a free discovery call.',
+			},
+			{
+				q: 'Is managed IT included in a VCPility plan?',
+				a: 'Managed IT and essential business IT are included in the VCPility Custom plan, which is quoted in writing after a free discovery call.',
+			},
+			{
+				q: 'Do you work alongside our existing IT person?',
+				a: 'Yes. Sharktech Global can run your IT fully or support the person who looks after it today.',
+			},
+			{
+				q: 'Who is this for?',
+				a: 'Accountants, bookkeepers, financial planners, mortgage brokers and other professional services firms that want one partner for growth and IT.',
 			},
 		],
 	},
