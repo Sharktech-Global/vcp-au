@@ -4,7 +4,7 @@ description: 'From 10 December 2026, Australian businesses covered by the Privac
 category: Privacy and Compliance
 date: 2026-11-13
 author: 'VCPility Team, Sharktech Global'
-seoTitle: 'AI, CRM Automation and the December 2026 Privacy Rules | VCPility'
+seoTitle: 'AI, CRM and the 10 December Privacy Rules | VCPility'
 seoDescription: 'What Australian accountants, brokers and clinics using AI receptionists or CRM automation must add to their privacy policy before 10 December 2026.'
 cover: ../../assets/web-services/services/integrations-ai-automation.jpg
 coverAlt: 'A smiling woman holding a smartphone, reading a message'
