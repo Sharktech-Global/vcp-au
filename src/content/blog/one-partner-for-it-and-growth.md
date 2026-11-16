@@ -35,7 +35,7 @@ Trust comes from accountability you can check, not from promises. Before choosin
 
 Here is how Sharktech Global answers those questions on its [services page](https://www.sharktech.com.au/services):
 
-- **Published starting prices.** Managed IT starts from $120 per user a month, and the first month runs as a pilot. VCPility growth plans are published on the [plans page](/plans).
+- **Published starting prices.** Managed IT starts from A$60 per user a month plus GST, with no minimum number of users and no lock-in. VCPility growth plans are published on the [plans page](/plans).
 - **An Australian-led team.** Sharktech is based in Liverpool NSW and South Yarra VIC, with one accountable contact.
 - **Independent advice.** Sharktech states no hardware commissions and no false 24/7 promises.
 - **Product builders.** Sharktech builds and runs its own software platforms, including VCPility, and applies that engineering experience to client work.
@@ -72,7 +72,7 @@ VCPility is the web services division of Sharktech Global, built and supported b
 
 ### Does VCPility provide managed IT?
 
-Yes, through Sharktech Global, its parent company. Sharktech delivers managed IT from $120 per user a month.
+Yes, through Sharktech Global, its parent company. Sharktech delivers managed IT from A$60 per user a month plus GST, with no minimum number of users.
 
 ### Can I start with the growth system and add IT later?
 
