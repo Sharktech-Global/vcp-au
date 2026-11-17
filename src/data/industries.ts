@@ -32,6 +32,8 @@ export interface Industry {
 	/** VCPility tools used on this page's setup */
 	tools: string[];
 	faqs: { q: string; a: string }[];
+	/** Optional referral line under the solution cards, for work a sister company delivers */
+	partner?: { text: string; label: string; href: string };
 }
 
 const steps = [
@@ -278,7 +280,7 @@ export const industries: Industry[] = [
 		seoDescription:
 			'Done-for-you CRM and AI automation for Australian start-ups and founders. Capture every lead, follow up automatically and grow without a big team.',
 		keywords:
-			'CRM for startups Australia, AI automation for entrepreneurs, startup marketing automation Australia, AI agents for small business, done for you CRM',
+			'CRM for startups Australia, startup marketing automation Australia, website for a new business, lead generation for startups, AI agents for startups, startup sales pipeline',
 		facts: [
 			{ label: 'Best for', value: 'Founders and early-stage teams' },
 			{ label: 'Fixes', value: 'Too many tools, too little time' },
@@ -320,7 +322,16 @@ export const industries: Industry[] = [
 				q: 'Can it grow with us?',
 				a: 'Yes. Start on a smaller plan and move up as the team and pipeline grow. Custom plans cover larger builds and integrations.',
 			},
+			{
+				q: 'Can VCPility build our app or software product?',
+				a: 'VCPility sets up your website, CRM and marketing. Custom apps and software products are built by Sharktech Global, our parent company, starting with a free, confidential consultation.',
+			},
 		],
+		partner: {
+			text: 'Building an app or software product? Sharktech Global, our parent company, builds it.',
+			label: 'Startup software and app development',
+			href: 'https://www.sharktech.com.au/services/startup-product-development',
+		},
 	},
 	{
 		slug: 'ai-receptionist-for-accountants',
