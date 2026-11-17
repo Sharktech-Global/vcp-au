@@ -1,6 +1,6 @@
 ---
 title: 'How Much Does a Small Business Website Cost in Australia in 2026?'
-description: 'Most Australian small business websites cost between A$2,000 and A$10,000 to build, plus hosting and care each month. Here is what changes the price and what to ask.'
+description: 'What drives the cost of a small business website in Australia, what it costs to run each month, and the questions to ask before you sign a quote.'
 category: Websites
 date: 2026-11-16
 author: 'VCPility Team, Sharktech Global'
@@ -10,21 +10,21 @@ cover: ../../assets/web-services/services/website-design-development.jpg
 coverAlt: 'Hand-drawn website wireframe sketches in an open notebook beside a smartphone on a wooden desk'
 ---
 
-A professional website for an Australian small business usually costs between A$2,000 and A$10,000 to build in 2026, plus a monthly amount for hosting, security and updates. A simple five to eight page brochure site sits at the lower end. Online bookings, payments, integrations with your CRM and custom design push the price up.
+The cost of a small business website in Australia depends on scope: how many pages, who writes the words, and whether it takes bookings, payments or connects to your CRM. VCPility builds websites from A$2,000 plus GST, with the scope and price agreed in writing. Running costs each month matter as much as the build price.
 
-The trouble is that two quotes for "a website" can describe very different things. This guide explains what the ranges cover, what drives the cost, and how to compare quotes fairly.
+The trouble is that two quotes for "a website" can describe very different things. This guide explains what drives the cost, what you pay after launch, and how to compare quotes fairly.
 
-## What are Australian websites costing in 2026?
+## What do you get at each level of website?
 
-Published Australian guides agree on the broad bands, even if their numbers differ a little:
+Most small business websites fall into one of three levels. The higher the level, the more work is involved and the higher the quote.
 
-| Source (2026) | Typical small business range |
-| --- | --- |
-| [What's The Damage, web design cost guide](https://whatsthedamage.com.au/web-design-cost/) | A$2,000 to A$6,000 |
-| [WP Creative, how much does a website cost in Australia](https://wpcreative.com.au/how-much-does-a-website-cost-in-australia/) | A$3,000 to A$10,000 |
-| [WebCraft Studio, affordable website design in Australia](https://webcraftstudio.com.au/blog/affordable-website-design-australia) | A$1,500 to A$5,000 for a freelancer or small agency; A$5,000 to A$15,000 or more for a full agency |
+| Level | What it usually includes | Who it suits |
+| --- | --- | --- |
+| Brochure site | Five to eight pages, contact form, Google Business Profile link, basic search setup | New firms and sole operators who need to look credible |
+| Lead generation site | Everything above, plus online booking, quote or enquiry forms connected to a CRM, and page-by-page search work | Accountants, bookkeepers, brokers and planners who rely on enquiries |
+| Site with integrations | Everything above, plus payments, client portals, or connections to accounting and practice software | Firms with more complex client journeys |
 
-VCPility, the web services division of [Sharktech Global](https://www.sharktech.com.au/services), builds websites from A$2,000 plus GST, with the scope and price agreed in writing before work starts.
+VCPility, the web services division of [Sharktech Global](https://www.sharktech.com.au/services), builds websites from A$2,000 plus GST. Your exact price depends on the level and the scope you agree.
 
 ## What changes the price of a website?
 
@@ -46,7 +46,7 @@ Plan for the running costs before you compare build quotes. A website needs a do
 | Platform | CRM, booking calendar, chat and review requests in one place |
 | Digital marketing | Search, Google Business Profile, social posts and campaign reporting |
 
-VCPility platform plans start from A$50 plus GST a month, and digital marketing starts from A$300 plus GST a month. Current inclusions are on the [plans page](/plans).
+VCPility platform plans start from A$50 plus GST a month. Digital marketing starts from A$300 plus GST a month billed annually, or A$360 plus GST month to month, on the Elevate plan. Current inclusions are on the [plans page](/plans).
 
 ## Is a cheaper website a false saving?
 
@@ -61,6 +61,18 @@ Ask every provider the same questions:
 - How do enquiries reach me, and can they go straight into a CRM?
 - What happens if I want to move the site to another provider?
 
+## How do you compare two website quotes fairly?
+
+Put both quotes side by side and check them line by line. A quote is only cheaper if it delivers the same result. Look for what is missing, not just the total.
+
+Check that each quote states the number of pages, who writes the copy, which forms and integrations are included, and what search setup is done. Then add twelve months of running costs to each build price. The quote with the lower first-year total, for the same scope, is the better value.
+
+## What makes a website pay for itself?
+
+A website pays for itself when it turns visitors into enquiries and those enquiries are answered quickly. Design matters, but follow-up matters more.
+
+For professional services firms, the website is the start of the client journey, not the end. An enquiry form that lands in a shared inbox can sit for hours. When the form feeds a CRM, the enquirer gets an instant reply, a booking link and a reminder. That is where VCPility fits: the website and the platform work together. Read more in our guide to [speed to lead](/blog/speed-to-lead).
+
 ## Website, web app or platform: which do you need?
 
 A website tells people who you are and turns visitors into enquiries. A web app does work: customer portals, quoting tools, job tracking. A platform such as VCPility runs the follow-up: CRM, bookings, reviews and automated messages.
@@ -71,8 +83,28 @@ Most service businesses need a website plus a platform. If you need custom softw
 
 A simple brochure site usually takes two to four weeks once content is ready. Sites with bookings, payments or integrations take longer. The biggest delay is almost always content: page copy, photos and approvals.
 
+## Frequently asked questions
+
+### Do website prices in this guide include GST?
+
+No. All VCPility prices in this guide exclude GST. Your written quote shows the GST amount separately.
+
+### Can I supply my own content to reduce the cost?
+
+Yes. If you provide the page copy and photos, the build takes less time and the quote is lower. We review your content for search and clarity before it goes live.
+
+### Will I own my website and domain?
+
+You should. Ask every provider to confirm in writing that the domain, hosting account and website files are in your name.
+
+### Do I need a CRM as well as a website?
+
+If your business relies on enquiries, yes. A CRM makes sure every enquiry is answered, followed up and tracked to a result.
+
 ## Get a written quote
 
 Tell us what your website needs to do and we will send a written scope and price. See our [web services](/web-services) or [contact the team](/contact).
 
-*General information only, current at 16 November 2026. Prices exclude GST. Market ranges are from the sources linked above; your quote depends on your scope.*
+*General information only, current at 16 November 2026. Prices exclude GST. Your quote depends on your scope.*
+
+Sources: [Sharktech Global services and pricing](https://www.sharktech.com.au/services) (read 17 November 2026); [VCPility plans](https://www.vcpility.com.au/plans) (read 17 November 2026).
