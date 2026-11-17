@@ -224,6 +224,14 @@ const schema = [
 					))
 				}
 			</ul>
+			{
+				industry.partner && (
+					<p class="lead reveal" style="margin-top: 2rem">
+						{industry.partner.text}{' '}
+						<a href={industry.partner.href} class="btn btn--link">{industry.partner.label}</a>
+					</p>
+				)
+			}
 		</div>
 	</section>
 
