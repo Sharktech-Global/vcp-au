@@ -643,7 +643,7 @@ export const services: Service[] = [
 		facts: [
 			{ label: 'Best for', value: 'Firms of 5 to 50 staff without in-house IT' },
 			{ label: 'Delivered by', value: 'Sharktech Global' },
-			{ label: 'Managed IT from', value: '$120 per user a month' },
+			{ label: 'Managed IT from', value: 'A$60 per user a month plus GST' },
 		],
 		overview:
 			'When your CRM, phones, email and AI agents are run by different providers, nobody owns the problem. One technology partner means one number to call and one team accountable for the whole environment.',
@@ -688,7 +688,7 @@ export const services: Service[] = [
 			},
 			{
 				q: 'How much does managed IT cost?',
-				a: 'Sharktech Global managed IT starts from $120 per user a month. Your exact price is confirmed in writing after a free discovery call.',
+				a: 'Sharktech Global managed IT starts from A$60 per user a month plus GST, with no minimum number of users. Add backups, security, AI agent management or on-site visits only when you need them. Your exact price is confirmed in writing after a free 30-minute IT review.',
 			},
 			{
 				q: 'Is managed IT included in a VCPility plan?',
