@@ -1,0 +1,29 @@
+---
+import '../styles/components/built-by.css';
+
+const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
+---
+
+<section class="built-by" aria-labelledby="built-by-title">
+	<div class="container built-by__grid">
+		<div class="built-by__intro reveal">
+			<p class="built-by__mark">
+				<span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+				Parent company
+			</p>
+			<h2 id="built-by-title" class="built-by__title">Built by Sharktech Global</h2>
+		</div>
+
+		<div class="built-by__copy reveal" style="--d: 0.12s">
+			<p>
+				Vcpility is the web services division of Sharktech Global, an Australian technology company founded in 2023. Our
+				office is in Liverpool NSW. Client meetings in South Yarra by appointment. Hours are Monday to Friday 9am to 7pm
+				AEST, with after 7pm and Saturdays by appointment.
+			</p>
+			<a class="btn btn--link" href="https://www.sharktech.com.au">
+				Visit Sharktech Global
+				<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+			</a>
+		</div>
+	</div>
+</section>

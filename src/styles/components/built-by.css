@@ -1,0 +1,56 @@
+/* Short parent-company band. Uses the site type, ink and hairline rules. */
+
+.built-by {
+	padding-block: clamp(72px, 8vw, 120px);
+	border-top: 1px solid var(--rule);
+	background: var(--color-white);
+}
+
+.built-by__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	align-items: end;
+	gap: 32px 80px;
+}
+
+.built-by__mark {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 20px;
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	color: var(--muted);
+}
+
+.built-by__title {
+	max-width: 9em;
+	font-size: clamp(36px, 3.2vw + 12px, 64px);
+	font-weight: 600;
+	line-height: 0.98;
+	letter-spacing: -0.045em;
+}
+
+.built-by__copy p {
+	max-width: 48ch;
+	font-size: clamp(16.5px, 0.3vw + 15px, 18.5px);
+	line-height: 1.7;
+	color: var(--muted);
+}
+
+.built-by__copy .btn {
+	margin-top: 28px;
+	color: var(--ink);
+}
+
+@media (max-width: 800px) {
+	.built-by__grid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.built-by__title {
+		max-width: 10em;
+	}
+}
