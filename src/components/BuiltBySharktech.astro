@@ -1,4 +1,5 @@
 ---
+import { behindAnswer, behindQuestion } from '../data/attribution';
 import '../styles/components/built-by.css';
 
 const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
@@ -20,10 +21,21 @@ const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
 				office is in Liverpool NSW. Client meetings in South Yarra by appointment. Hours are Monday to Friday 9am to 7pm
 				AEST, with after 7pm and Saturdays by appointment.
 			</p>
+			<p class="built-by__product">A Sharktech Global product</p>
+			<p class="built-by__credit">
+				<a href="https://www.dainudevis.com">Dainu Devis</a>, CEO, <a href="https://www.sharktech.com.au">Sharktech Global</a>
+			</p>
 			<a class="btn btn--link" href="https://www.sharktech.com.au">
 				Visit Sharktech Global
 				<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
 			</a>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="built-by__faq reveal" style="--d: 0.16s">
+			<h3>{behindQuestion}</h3>
+			<p>{behindAnswer}</p>
 		</div>
 	</div>
 </section>

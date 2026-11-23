@@ -46,6 +46,7 @@ const shareUrl = Astro.site ? new URL(share.src, Astro.site).href : share.src;
 // Opening hours stay off this node. Other pages still publish 9am to 6pm and 9am to 9pm.
 const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
 const sharktechId = 'https://www.sharktech.com.au/#organization';
+const dainuId = 'https://www.dainudevis.com/#person';
 const organisation = {
 	'@context': 'https://schema.org',
 	'@type': 'Organization',
@@ -73,6 +74,14 @@ const organisation = {
 		'@id': sharktechId,
 		name: 'Sharktech Global',
 		url: 'https://www.sharktech.com.au',
+		employee: {
+			'@type': 'Person',
+			'@id': dainuId,
+			name: 'Dainu Devis',
+			jobTitle: 'CEO',
+			url: 'https://www.dainudevis.com',
+			worksFor: { '@id': sharktechId },
+		},
 	},
 	sameAs: ['https://www.facebook.com/Sharktechvcpility', 'https://www.instagram.com/sharktechvcpility/'],
 };
