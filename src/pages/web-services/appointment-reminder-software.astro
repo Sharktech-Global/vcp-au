@@ -1,0 +1,314 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import reminderCard from '../../assets/web-services/appointment-reminder-card.webp';
+import '../../styles/pages/service.css';
+import '../../styles/pages/post.css';
+import '../../styles/pages/appointment-reminders.css';
+
+/* Illustrative booking card drawn for this page (SVG source, delivered as webp).
+   No third-party photograph and no external licence.
+   It shows booking confirmation, email and SMS reminders, and client rescheduling. */
+
+const seoTitle = 'Appointment Reminder Software in Australia | VCPility';
+const seoDescription =
+	'Cut no-shows with appointment reminder software for Australian firms. Email and SMS reminders, client rescheduling, and CRM follow-up, without the chase.';
+
+const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
+
+const heroFacts = [
+	{ label: 'For', value: 'Owners losing hours to no-shows' },
+	{ label: 'Includes', value: 'Confirmations, reminders and rescheduling' },
+	{ label: 'Channels', value: 'Email and SMS' },
+];
+
+const keyFacts = [
+	'Instant booking confirmations go out by email and SMS.',
+	'Customers can reschedule or cancel a booking themselves.',
+	'Automated appointment reminders are included to reduce no-shows.',
+	'An online booking calendar takes the appointment.',
+	'The AI chatbot can book an appointment from website chat.',
+	'The mobile app sends a real-time notification when a booking arrives.',
+	'The CRM can schedule reminders, emails and SMS campaigns.',
+	'WhatsApp campaigns are included on the same platform.',
+	'Commercial email and SMS need consent, identification and an unsubscribe under the Spam Act 2003.',
+];
+
+const faqs = [
+	{
+		q: 'What is appointment reminder software?',
+		a: 'It sends the booking confirmation and a later reminder, so your team is not typing each one. On VCPility it sits with the online calendar, email, SMS and the CRM.',
+	},
+	{
+		q: 'Does VCPility send reminders by email and SMS?',
+		a: 'Yes. Confirmations go by email and SMS, and automated reminders are included to reduce no-shows. The CRM can schedule reminders, emails and SMS. WhatsApp campaigns are on the same platform.',
+	},
+	{
+		q: 'Can a client reschedule without calling the business?',
+		a: 'Yes. Customers can reschedule or cancel the booking themselves. Use the reminder to point them at that option while the day can still change.',
+	},
+	{
+		q: 'Are appointment reminders covered by the Spam Act 2003?',
+		a: 'A reminder with no advertisement is generally not spam. If the message also offers or promotes something, you need consent, you must identify your business, and you must include a working unsubscribe.',
+	},
+	{
+		q: 'Do reminders connect to the CRM?',
+		a: 'Yes. The booking, the messages and the contact stay on one CRM record, and the mobile app notifies you of new bookings. The chatbot and the AI receptionist can both book the appointment.',
+	},
+	{
+		q: 'Where are prices and what is included?',
+		a: 'Prices are not on this page. The plans page lists what is included. The features page lists smart booking, reminders and the CRM.',
+	},
+];
+
+const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const sharktechOrg = 'https://www.sharktech.com.au/#organization';
+
+const schema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		'@id': `${pageUrl}#service`,
+		name: 'Appointment reminder software',
+		serviceType: 'Appointment reminder software',
+		description: seoDescription,
+		url: pageUrl,
+		areaServed: { '@type': 'Country', name: 'Australia' },
+		provider: {
+			'@id': `${site}#organization`,
+			parentOrganization: { '@id': sharktechOrg },
+		},
+		creator: { '@id': sharktechOrg },
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map(({ q, a }) => ({
+			'@type': 'Question',
+			name: q,
+			acceptedAnswer: { '@type': 'Answer', text: a },
+		})),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: site },
+			{ '@type': 'ListItem', position: 2, name: 'Web Services', item: new URL('/web-services', site).href },
+			{ '@type': 'ListItem', position: 3, name: 'Appointment reminder software', item: pageUrl },
+		],
+	},
+];
+---
+
+<Layout
+	title={seoTitle}
+	description={seoDescription}
+	keywords="appointment reminder software, appointment reminders Australia, SMS appointment reminders, email appointment reminders, reduce no-shows"
+	image={reminderCard}
+	schema={schema}
+>
+	<section class="page-hero svc-hero" data-pause-offscreen>
+		<canvas class="svc-hero__grid" aria-hidden="true" data-flicker-grid></canvas>
+		<div class="container">
+			<nav class="svc-crumbs reveal" aria-label="Breadcrumb">
+				<a href="/">Home</a>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+				<a href="/web-services">Web services</a>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+				<span aria-current="page">Appointment reminder software</span>
+			</nav>
+
+			<p class="label reveal" style="--d: 0.04s">
+				<span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+				Booking and reminders
+			</p>
+
+			<div class="page-hero__grid">
+				<h1 class="page-hero__title reveal-lines" style="--d: 0.08s">
+					<span class="line"><span class="line__inner">Appointment reminder software</span></span>
+					<span class="line" style="--i: 1"><span class="line__inner muted">for Australian businesses</span></span>
+				</h1>
+				<div>
+					<p class="lead reveal" style="--d: 0.2s">
+						A no-show is a hole in the day. The room is ready, the work is not, and someone has to chase the client.
+						Appointment reminder software sends the confirmation and the nudge for you, and gives the client a way to
+						move the time instead of going quiet.
+					</p>
+					<div class="page-hero__buttons reveal" style="--d: 0.28s">
+						<a href="/contact" class="btn btn--accent btn--shine" data-magnetic>
+							Book a demo
+							<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+						</a>
+						<a href="/features#smart-booking" class="btn btn--link">See booking tools</a>
+					</div>
+				</div>
+			</div>
+
+			<dl class="svc-facts">
+				{
+					heroFacts.map(({ label, value }, i) => (
+						<div class="reveal" style={`--d: ${0.3 + i * 0.06}s; --c: var(--brand-${i + 1})`}>
+							<dt>{label}</dt>
+							<dd>{value}</dd>
+						</div>
+					))
+				}
+			</dl>
+		</div>
+	</section>
+
+	<section class="chapter">
+		<div class="container ar-body">
+			<div class="ar-intro">
+				<p class="label reveal"><span class="label__num">01</span>Key facts</p>
+				<ul class="ar-facts">
+					{keyFacts.map((fact) => <li>{fact}</li>)}
+				</ul>
+			</div>
+
+			<article class="prose">
+				<h2>What does appointment reminder software do?</h2>
+				<p>
+					Appointment reminder software sends the confirmation and the later nudge, so nobody on your team is typing
+					them one by one. On VCPility it sits with the online booking calendar. A new booking sends an instant
+					confirmation by email and SMS, the client can reschedule or cancel, and automated reminders go out to reduce
+					no-shows.
+				</p>
+
+				<figure>
+					<Image
+						src={reminderCard}
+						alt="Illustrative booking card: a 2:00 pm appointment confirmed, an email confirmation sent, an SMS reminder scheduled, and rescheduling available to the client."
+						width={1200}
+						height={630}
+						widths={[640, 960, 1200]}
+						sizes="(max-width: 800px) 92vw, 760px"
+						loading="lazy"
+					/>
+					<figcaption>Illustrative reminder card.</figcaption>
+				</figure>
+
+				<h2>What does a no-show cost the owner?</h2>
+				<p>
+					A no-show costs the time you held and the chance to give that time to someone else. By the time you notice,
+					the gap is usually too short to refill, so the hour is gone. Then comes the awkward part: ringing to ask where
+					they are, leaving a message, and deciding whether to keep the slot.
+				</p>
+
+				<h2>Which reminder timings and channels make sense?</h2>
+				<p>
+					A practical set is a confirmation as soon as they book, a reminder the day before, and a brief note on the
+					morning if the appointment is easy to forget. Email carries the time, place and how to change it. SMS is the
+					short nudge they are more likely to see that day. Stop when someone asks you to.
+				</p>
+
+				<h2>How can clients reschedule instead of going quiet?</h2>
+				<p>
+					People often miss an appointment because the time no longer works, and calling to say so feels awkward, so they
+					go quiet. Give them a way to move or cancel without a conversation. VCPility lets customers reschedule or
+					cancel the booking themselves. Point them at that option with the reminder, while the day can still be
+					rearranged.
+				</p>
+
+				<h2>What does the Spam Act 2003 require for SMS and email?</h2>
+				<p>
+					A plain appointment reminder, with no advertisement, is generally not spam. The ACMA says this for messages
+					with no advertisements that are appointment or payment reminders. The Spam Act 2003 applies when a message
+					also offers, advertises or promotes a product or service. Those commercial emails and SMS need consent before
+					you send them.
+				</p>
+				<p>
+					Express consent is a form, a ticked box, a phone call or a face-to-face yes. Record who agreed, when and how.
+					You cannot send a message to ask for consent. Inferred consent needs an ongoing relationship, and marketing
+					that relates directly to it. One purchase is not enough.
+				</p>
+				<p>
+					Name your business and keep the contact details correct for at least 30 days. If someone else sends the
+					message, it must still name you. Add an unsubscribe, action it within 5 working days, charge no fee, and keep
+					it working for at least 30 days. It must not ask anyone to log in or hand over extra personal information.
+				</p>
+				<p>
+					Keep the reminder to the time, the place and how to reschedule. Add an offer, and the whole message is
+					commercial. This is a summary for owners, not legal advice. The ACMA sets out the sender rules in
+					<a href="https://www.acma.gov.au/avoid-sending-spam">Avoid sending spam</a>
+					and what counts as spam in
+					<a href="https://www.acma.gov.au/dealing-with-spam">Dealing with spam</a>.
+				</p>
+
+				<h2>How do reminders fit with the CRM?</h2>
+				<p>
+					A reminder helps when the booking, the message and any reply sit on the same client record. In VCPility the
+					online calendar, email and SMS, and the CRM are one system. Confirmations and reminders go out, the contact
+					stays in the pipeline, and the mobile app notifies you when a booking arrives.
+				</p>
+				<p>
+					The AI chatbot can book from website chat. The
+					<a href="/web-services/ai-receptionist">AI receptionist</a> can answer and book while you are with a client.
+					Pipeline, calendar and follow-up are part of <a href="/web-services/crm-setup">CRM set-up</a>. See smart
+					booking on the <a href="/features">features</a> page, and what is included on the <a href="/plans">plans</a> page.
+				</p>
+
+				<h2>What do owners ask about appointment reminders?</h2>
+				<p>
+					Owners usually ask what gets sent, on which channel, whether a client can move the time, and when the Spam Act
+					applies. The answers below stay with what VCPility already does, and with the ACMA rules above. Prices are not
+					listed on this page.
+				</p>
+			</article>
+
+			<div class="ar-faq svc-faq__list">
+				{
+					faqs.map(({ q, a }, i) => (
+						<details open={i === 0}>
+							<summary>
+								{q}
+								<span class="svc-faq__icon" aria-hidden="true" />
+							</summary>
+							<p>{a}</p>
+						</details>
+					))
+				}
+			</div>
+
+			<p class="ar-credit">
+				VCPility is the web services division of Sharktech Global.
+				<a href="https://www.sharktech.com.au/">Built by Sharktech Global</a>.
+			</p>
+		</div>
+	</section>
+
+	<section class="finale">
+		<div class="container">
+			<div class="finale__panel" data-pause-offscreen>
+				<canvas class="shader" aria-hidden="true" data-shader></canvas>
+				<span class="ripple" aria-hidden="true">
+					{[0, 1, 2, 3, 4].map((n) => <span style={`--n: ${n}`} />)}
+				</span>
+				<div class="finale__inner">
+					<span class="bars bars--light reveal" aria-hidden="true">
+						<span></span><span></span><span></span><span></span><span></span>
+					</span>
+					<h2 class="finale__title reveal-lines" style="--d: 0.1s">
+						<span class="line"><span class="line__inner">Want reminders running</span></span>
+						<span class="line" style="--i: 1"><span class="line__inner">without the late-night admin?</span></span>
+					</h2>
+					<p class="finale__text reveal" style="--d: 0.25s">
+						Start with the bookings you already have. Turn on confirmations and reminders for those, and make
+						rescheduling obvious, before you add more campaigns. Book a demo from the
+						<a href="/contact">contact page</a> if you want it set up around your week. The
+						<a href="/plans">plans page</a> shows what is included.
+					</p>
+					<div class="finale__buttons reveal" style="--d: 0.3s">
+						<a href="/contact" class="btn btn--light btn--shine" data-magnetic>
+							Book a demo
+							<svg viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+						</a>
+						<a href="/plans" class="btn btn--link btn--on-ink">See plans</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
