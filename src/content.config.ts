@@ -20,6 +20,13 @@ const blog = defineCollection({
 			author: z.string().default('VCPility Team'),
 			cover: image(),
 			coverAlt: z.string(),
+			/** Lazy-load the cover when it sits below the fold */
+			lazyCover: z.boolean().default(false),
+			/**
+			 * When set, BlogPosting publisher and creator use this @id,
+			 * and the author links to the site Organization by @id.
+			 */
+			publisherId: z.string().optional(),
 			/** Hide a post from the site without deleting it */
 			draft: z.boolean().default(false),
 		}),
