@@ -1,0 +1,70 @@
+/* Appointment reminder software landing page.
+   Hero, FAQ accordion and closing panel come from the shared styles. */
+
+.ar-intro {
+	max-width: 68ch;
+	margin-bottom: clamp(36px, 5vw, 64px);
+}
+
+.ar-facts {
+	display: grid;
+	gap: 0.75em;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ar-facts li {
+	position: relative;
+	padding-left: 1.35em;
+	font-size: clamp(16.5px, 0.2vw + 16px, 18px);
+	line-height: 1.55;
+	color: #3b4658;
+}
+
+.ar-facts li::before {
+	content: '';
+	position: absolute;
+	top: 0.62em;
+	left: 0;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--brand-1);
+}
+
+.ar-body {
+	max-width: 76ch;
+}
+
+.ar-faq {
+	max-width: 76ch;
+	margin-top: clamp(28px, 4vw, 48px);
+}
+
+.ar-credit {
+	max-width: 68ch;
+	margin-top: clamp(36px, 5vw, 64px);
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--muted);
+}
+
+.ar-credit a {
+	font-weight: 600;
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 4px;
+}
+
+.ar-credit a:hover {
+	text-decoration-color: var(--color-accent);
+}
+
+.finale__text a {
+	color: #fff;
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}

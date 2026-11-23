@@ -17,18 +17,33 @@ const servicesSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'ItemList',
 	name: 'VCPility web and AI services',
-	itemListElement: services.map((service, i) => ({
-		'@type': 'ListItem',
-		position: i + 1,
-		item: {
-			'@type': 'Service',
-			name: service.title,
-			description: service.seoDescription ?? service.lead,
-			url: new URL(`/web-services/${service.slug}`, site).href,
-			provider: { '@id': `${site}#organization` },
-			areaServed: { '@type': 'Country', name: 'Australia' },
+	itemListElement: [
+		...services.map((service, i) => ({
+			'@type': 'ListItem',
+			position: i + 1,
+			item: {
+				'@type': 'Service',
+				name: service.title,
+				description: service.seoDescription ?? service.lead,
+				url: new URL(`/web-services/${service.slug}`, site).href,
+				provider: { '@id': `${site}#organization` },
+				areaServed: { '@type': 'Country', name: 'Australia' },
+			},
+		})),
+		{
+			'@type': 'ListItem',
+			position: services.length + 1,
+			item: {
+				'@type': 'Service',
+				name: 'Appointment reminder software',
+				description:
+					'Email and SMS appointment reminders, client rescheduling and booking kept in the CRM for Australian small businesses.',
+				url: new URL('/web-services/appointment-reminder-software', site).href,
+				provider: { '@id': `${site}#organization` },
+				areaServed: { '@type': 'Country', name: 'Australia' },
+			},
 		},
-	})),
+	],
 };
 const arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>';
 
@@ -265,6 +280,24 @@ const steps = [
 						</li>
 					))
 				}
+				<li class="ws-index__row reveal">
+					<span class="ws-index__num">{pad(services.length + 1)}</span>
+					<h3 class="ws-index__title">
+						<a href="/web-services/appointment-reminder-software">Appointment reminder software</a>
+					</h3>
+					<div class="ws-index__body">
+						<p>
+							Automated email and SMS reminders, client rescheduling, and booking that stays in the CRM, for firms
+							that lose hours to no-shows.
+						</p>
+						<ul class="ws-tags">
+							<li>Email and SMS</li>
+							<li>Rescheduling</li>
+							<li>CRM</li>
+						</ul>
+					</div>
+					<svg class="ws-index__arrow" viewBox="0 0 24 24" aria-hidden="true" set:html={arrow} />
+				</li>
 			</ul>
 
 			<div class="ws-pair">
