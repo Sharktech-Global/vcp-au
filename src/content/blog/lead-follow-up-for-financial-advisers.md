@@ -68,7 +68,7 @@ A simple sequence for someone who enquired but has not booked could look like th
 4. **Day seven.** A reminder that the booking link is still open, with no deadline.
 5. **Monthly after that.** Practice news or general education your licensee has approved, until they book or unsubscribe.
 
-For people who do book, send a confirmation, a reminder the day before and a note on what to bring.
+For people who do book, send a confirmation, a reminder the day before and a note on what to bring. The timings, the channel and the Spam Act basics are covered in [appointment reminder software](/web-services/appointment-reminder-software).
 
 Keep every message general. Anything about a person's own super, investments, insurance or strategy belongs in a meeting with a licensed adviser. Your licensee and compliance team should approve the templates before they go live.
 

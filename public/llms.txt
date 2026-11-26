@@ -8,6 +8,7 @@ VCPility also provides website design and development, web applications, e-comme
 
 - [Home](https://www.vcpility.com.au/): what VCPility does and the industries it serves
 - [Features](https://www.vcpility.com.au/features): the full list of platform tools
+- [Appointment reminder software](https://www.vcpility.com.au/web-services/appointment-reminder-software): email and SMS confirmations and reminders, client rescheduling, and booking kept in the CRM
 - [Plans and pricing](https://www.vcpility.com.au/plans): monthly and annual plans, add-ons and the AI voice budget calculator
 - [For accountants](https://www.vcpility.com.au/industries/accountants): CRM, AI voice agent and follow-up for accounting firms
 - [For bookkeepers](https://www.vcpility.com.au/industries/bookkeepers): CRM and client onboarding automation for bookkeepers
@@ -26,6 +27,7 @@ VCPility also provides website design and development, web applications, e-comme
 ## Guides
 
 - [Blog](https://www.vcpility.com.au/blog): practical guides on speed to lead, Google reviews, website enquiries and choosing a CRM in Australia
+- [Moving from a spreadsheet to a CRM](https://www.vcpility.com.au/blog/spreadsheet-to-crm): signs a spreadsheet has stopped working, what to move across, cleaning contacts, pipeline stages, staff use and keeping customer data secure
 
 ## Contact
 

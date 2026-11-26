@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Booking confirmation and reminder</title>
+  <desc id="desc">Illustrative card for a confirmed 2:00 pm appointment, with email and SMS reminders and client rescheduling.</desc>
+  <rect width="1200" height="630" fill="#f6f7f9"/>
+  <g transform="translate(70 56)">
+    <rect width="1060" height="518" rx="28" fill="#ffffff" stroke="#0d1f381a"/>
+    <g transform="translate(48 40)">
+      <rect width="8" height="28" rx="2" fill="#5b8fd0"/>
+      <rect x="14" width="8" height="28" rx="2" fill="#77be4a"/>
+      <rect x="28" width="8" height="28" rx="2" fill="#7f4c80"/>
+      <rect x="42" width="8" height="28" rx="2" fill="#f4c443"/>
+      <rect x="56" width="8" height="28" rx="2" fill="#e8452f"/>
+      <text x="84" y="20" fill="#667085" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Booking</text>
+    </g>
+    <text x="48" y="130" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="650">Tomorrow, 2:00 pm</text>
+    <text x="48" y="172" fill="#667085" font-family="Inter, system-ui, sans-serif" font-size="20">Appointment confirmed</text>
+    <g transform="translate(48 214)">
+      <rect width="964" height="78" rx="16" fill="#f6f7f9"/>
+      <circle cx="36" cy="39" r="8" fill="#77be4a"/>
+      <text x="60" y="34" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="650">Email confirmation</text>
+      <text x="60" y="58" fill="#667085" font-family="Inter, system-ui, sans-serif" font-size="16">Sent when the client books</text>
+      <text x="860" y="48" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="650">Sent</text>
+    </g>
+    <g transform="translate(48 308)">
+      <rect width="964" height="78" rx="16" fill="#f6f7f9"/>
+      <circle cx="36" cy="39" r="8" fill="#5b8fd0"/>
+      <text x="60" y="34" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="650">SMS reminder</text>
+      <text x="60" y="58" fill="#667085" font-family="Inter, system-ui, sans-serif" font-size="16">Scheduled before the appointment</text>
+      <text x="820" y="48" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="650">Scheduled</text>
+    </g>
+    <g transform="translate(48 402)">
+      <rect width="964" height="78" rx="16" fill="#f6f7f9"/>
+      <circle cx="36" cy="39" r="8" fill="#f4c443"/>
+      <text x="60" y="34" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="650">Reschedule or cancel</text>
+      <text x="60" y="58" fill="#667085" font-family="Inter, system-ui, sans-serif" font-size="16">The client can change the booking</text>
+      <text x="820" y="48" fill="#0d1f38" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="650">Available</text>
+    </g>
+  </g>
+</svg>
