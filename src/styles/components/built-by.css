@@ -18,8 +18,9 @@
 	align-items: center;
 	gap: 12px;
 	margin-bottom: 20px;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 500;
+	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: var(--muted);
 }
@@ -56,7 +57,12 @@
 }
 
 .built-by__credit a {
-	border-bottom: 1.5px solid currentColor;
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 0.22em;
 }
 
 .built-by__credit a:hover {
