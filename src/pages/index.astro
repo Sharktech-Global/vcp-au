@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import BuiltBySharktech from '../components/BuiltBySharktech.astro';
+import { behindFaqSchema } from '../data/attribution';
 import '../styles/pages/home.css';
 
 import booking from '../assets/home/hero/booking.webp';
@@ -373,6 +375,7 @@ const industries = [
 	title="AI CRM and Business Automation for Australian SMEs | VCPility"
 	description="One Australian-built platform for your CRM, AI chatbot, AI voice agent, bookings, Google reviews and marketing. Answer every lead in minutes."
 	keywords="CRM for small business Australia, AI chatbot, AI voice agent, business automation, Google reviews software, online booking system"
+	schema={behindFaqSchema}
 >
 	<!-- ============================================
 	     Hero: the headline blurs in word by word (Magic UI Text Animate). On the right the
@@ -1086,6 +1089,8 @@ const industries = [
 			</div>
 		</div>
 	</section>
+
+	<BuiltBySharktech />
 </Layout>
 
 <script>

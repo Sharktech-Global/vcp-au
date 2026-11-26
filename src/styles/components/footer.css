@@ -209,6 +209,21 @@ a.footer__contact-value:hover {
 	border-top: 1px solid var(--f-rule);
 }
 
+.footer__division {
+	flex: 1 0 100%;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--f-text);
+}
+
+.footer__division .footer__link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
 .footer__copyright {
 	display: flex;
 	align-items: center;

@@ -42,19 +42,24 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : un
 const share = await getImage({ src: image, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
 const shareUrl = Astro.site ? new URL(share.src, Astro.site).href : share.src;
 
-// Site-wide structured data: who VCPility is and who stands behind it
+// Site-wide structured data: who Vcpility is and who stands behind it.
+// Opening hours stay off this node. Other pages still publish 9am to 6pm and 9am to 9pm.
 const site = Astro.site?.href ?? 'https://www.vcpility.com.au/';
+const sharktechId = 'https://www.sharktech.com.au/#organization';
+const dainuId = 'https://www.dainudevis.com/#person';
 const organisation = {
 	'@context': 'https://schema.org',
 	'@type': 'Organization',
 	'@id': `${site}#organization`,
-	name: 'VCPility',
-	url: site,
+	name: 'Vcpility',
+	alternateName: 'VCPility',
+	url: 'https://www.vcpility.com.au',
 	logo: new URL('/favicon.svg', site).href,
 	description:
 		'VCPility is the web services division of Sharktech Global: an Australian AI automation and CRM platform, websites and digital marketing for small and medium businesses.',
 	email: 'growth@vcpility.com.au',
 	telephone: '+61468017373',
+	foundingDate: '2023',
 	address: {
 		'@type': 'PostalAddress',
 		streetAddress: 'Level 1, 244 Macquarie St',
@@ -64,7 +69,20 @@ const organisation = {
 		addressCountry: 'AU',
 	},
 	areaServed: { '@type': 'Country', name: 'Australia' },
-	parentOrganization: { '@type': 'Organization', name: 'Sharktech Global', url: 'https://www.sharktech.com.au/' },
+	parentOrganization: {
+		'@type': 'Organization',
+		'@id': sharktechId,
+		name: 'Sharktech Global',
+		url: 'https://www.sharktech.com.au',
+		employee: {
+			'@type': 'Person',
+			'@id': dainuId,
+			name: 'Dainu Devis',
+			jobTitle: 'CEO',
+			url: 'https://www.dainudevis.com',
+			worksFor: { '@id': sharktechId },
+		},
+	},
 	sameAs: ['https://www.facebook.com/Sharktechvcpility', 'https://www.instagram.com/sharktechvcpility/'],
 };
 const website = {
@@ -74,7 +92,8 @@ const website = {
 	name: 'VCPility',
 	url: site,
 	inLanguage: 'en-AU',
-	publisher: { '@id': `${site}#organization` },
+	creator: { '@id': sharktechId },
+	publisher: { '@id': sharktechId },
 };
 const structuredData = [organisation, website, ...(schema ? [schema].flat() : [])];
 ---
