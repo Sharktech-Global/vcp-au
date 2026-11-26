@@ -1,0 +1,10 @@
+spreadsheet-to-crm.webp
+
+Source: https://www.pexels.com/photo/person-analyzing-data-on-laptop-screen-34639577/
+Photographer: Wolf Art
+Licence: Pexels Licence (https://www.pexels.com/license/). Free to use, including commercial use. No attribution required by the licence. The photo was cropped to a 3:2 frame around the laptop screen and saved as WebP.
+
+Downloaded: 26 November 2026
+File: src/assets/blog/spreadsheet-to-crm.webp
+Dimensions: 2000 x 1333
+Alt text: A person at a laptop reviewing a spreadsheet of rows and columns

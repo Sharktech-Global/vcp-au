@@ -27,6 +27,7 @@ VCPility also provides website design and development, web applications, e-comme
 ## Guides
 
 - [Blog](https://www.vcpility.com.au/blog): practical guides on speed to lead, Google reviews, website enquiries and choosing a CRM in Australia
+- [Moving from a spreadsheet to a CRM](https://www.vcpility.com.au/blog/spreadsheet-to-crm): signs a spreadsheet has stopped working, what to move across, cleaning contacts, pipeline stages, staff use and keeping customer data secure
 
 ## Contact
 

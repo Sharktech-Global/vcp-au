@@ -95,7 +95,7 @@ They apply if the Privacy Act covers your business. The OAIC says most businesse
 
 ### What if our contacts are in a spreadsheet?
 
-Save a dated copy, clean a second copy, and map each column to a field. Consent and unsubscribe checks still apply if you email or text those people.
+Save a dated copy, clean a second copy, and map each column to a field. Consent and unsubscribe checks still apply if you email or text those people. Pipeline stages and getting the team using the new record are covered in [moving from a spreadsheet to a CRM](/blog/spreadsheet-to-crm).
 
 ### How do I avoid emailing people who have unsubscribed?
 

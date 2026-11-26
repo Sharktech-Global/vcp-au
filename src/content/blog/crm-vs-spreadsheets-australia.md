@@ -217,7 +217,7 @@ Consider moving when:
 - The business wants to automate repetitive communication
 - Customer history is becoming hard to track
 
-A good CRM for small businesses Australia should bring those moving parts into one clearer system. If you are ready to make the move, our [CRM migration checklist](/blog/crm-migration-checklist) covers how to switch without losing records.
+A good CRM for small businesses Australia should bring those moving parts into one clearer system. If you are ready to make the move, our [CRM migration checklist](/blog/crm-migration-checklist) covers how to switch without losing records. The steps for the live list, pipeline stages and getting the team using the record are in [moving from a spreadsheet to a CRM](/blog/spreadsheet-to-crm).
 
 VCPility currently combines customer management, pipeline tracking, online booking, automated follow-up, AI engagement, reviews and reporting within one platform designed for Australian service businesses.
 
